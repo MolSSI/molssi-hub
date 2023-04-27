@@ -77,14 +77,16 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
         Developer Guide
 
 .. list-table:: **Stay in Touch**
-   :widths: 10 10 10
+   :widths: 10 10 10 10
    :header-rows: 1
    :align: center
 
    * - GitHub
+     - ChemHub
      - Zenodo Community
      - MolSSI Guidelines
    * - |GitHub|
+     - |ChemHub|
      - |Zenodo|
      - |MolSSI|
 
@@ -95,12 +97,17 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    :alt: zenopy GitHub Repository
    :width: 90
 
+.. |ChemHub| image:: images/docker.svg
+   :target: https://hub.docker.com/u/chemai
+   :alt: Chem AI Docker Hub (ChemHub)
+   :width: 110
+
 .. |Zenodo| image:: https://about.zenodo.org/static/img/logos/zenodo-gradient-square.svg
    :target: https://zenodo.org/communities/molssi/
    :alt: MolSSI Zenodo Community
-   :width: 170
+   :width: 150
 
 .. |MolSSI| image:: https://raw.githubusercontent.com/MolSSI/molssi-branding-guidelines/master/logos/main_logo/molssi_main.svg
    :target: https://molssi-ai.github.io/molssi-ai-guidelines/index.html
    :alt: MolSSI Guidelines and Best Practices
-   :width: 150
+   :width: 140

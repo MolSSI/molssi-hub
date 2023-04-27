@@ -4,11 +4,9 @@
 TorchANI
 ********
 
-TorchANI is a software 
-package based on PyTorch that offers a family of (second-generation) 
-ANI neural network potentials. Supported potentials include `ANI-1`_,
-`ANI-1x`_, `ANI-1ccx`_ and `ANI-2x`_.
-
+TorchANI is a software package based on PyTorch and offers a family 
+of (second-generation) ANI neural network potentials. Supported 
+potentials include `ANI-1`_, `ANI-1x`_, `ANI-1ccx`_ and `ANI-2x`_.
 
 Source Specifications
 =====================
@@ -60,7 +58,7 @@ ChemHub Specifications
 Image Specifications
 ^^^^^^^^^^^^^^^^^^^^
 
-* **OS/Arch**: linux/amd64
+* **OS/Arch**: debian:bullseye-slim (linux/amd64)
 * **Users**: Root
 * **Environment variables**: None
 * **Volumes**: None

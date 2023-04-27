@@ -128,7 +128,8 @@ html_theme_options = {
 ],
 
     "secondary_sidebar_items": ["page-toc", "sourcelink"],
-    "footer_items": [ "molssi_footer" ],
+    "footer_start": [ "molssi_footer" ],
+    "footer_end": [],
 }
 
 # Path to project's logo
