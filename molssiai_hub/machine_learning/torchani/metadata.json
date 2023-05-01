@@ -1,0 +1,4 @@
+{
+    "name": "TorchANI",
+    "description": "TorchANI is a software package based on PyTorch\\ and offers a family of (second-generation) ANI neural network potentials. Supported potentials include ANI-1, ANI-1x, ANI-1ccx and ANI-2x."
+}

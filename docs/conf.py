@@ -17,13 +17,13 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-from chemhub._version import get_versions
+from molssiai_hub._version import get_versions
 revision = get_versions()['version']
 del get_versions
 
 # -- Project information -----------------------------------------------------
 
-project = "chemhub"
+project = "molssiai_hub"
 author = "Mohammad Mostafanejad"
 
 # The full version, including alpha/beta/rc tags.
@@ -57,6 +57,7 @@ autosummary_generate = True
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -111,9 +112,8 @@ html_theme = 'pydata_sphinx_theme'
 #     'titles_only': False
 # }
 html_theme_options = {
-    "github_url": "https://github.com/molssi-ai/chemhub",
+    "github_url": "https://github.com/molssi-ai/molssiai_hub",
     "twitter_url": "https://twitter.com/MolSSI_NSF",
-
     "logo": {
     "image_light": "molssi_main_logo.png",
     "image_dark": "molssi_main_logo_inverted_white.png",
@@ -164,11 +164,10 @@ html_show_copyright = False
 #
 # html_sidebars = {}
 
-
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'chemhubdoc'
+htmlhelp_basename = 'molssiai_hubdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -195,8 +194,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'chemhub.tex', 'chemhub',
-     'chemhub', 'manual'),
+    (master_doc, 'molssiai_hub.tex', 'molssiai_hub',
+     'molssiai_hub', 'manual'),
 ]
 
 
@@ -205,7 +204,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'chemhub', 'chemhub',
+    (master_doc, 'molssiai_hub', 'molssiai_hub',
      [author], 1)
 ]
 
@@ -216,7 +215,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'chemhub', 'chemhub Documentation',
+    (master_doc, 'molssiai_hub', 'molssiai_hub Documentation',
      author, 'Mohammad Mostafanejad', 'Container Hub for Computational Molecular Science',
      'Miscellaneous'),
 ]

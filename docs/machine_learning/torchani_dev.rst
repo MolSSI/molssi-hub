@@ -1,7 +1,7 @@
 .. _torchani_dev:
 
-*************************
-TorchNAI (for developers)
-*************************
+************
+TorchANI-dev
+************
 
 This is the page for torchani-dev

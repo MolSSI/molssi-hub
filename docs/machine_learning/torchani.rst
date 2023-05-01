@@ -15,11 +15,12 @@ Source Specifications
 * **Github**: https://github.com/aiqm/torchani
 * **Documentation**: https://aiqm.github.io/torchani/index.html
 
-ChemHub Specifications
-======================
+MolSSI-AI Container Hub Specifications
+======================================
 
 * **Repository**: https://hub.docker.com/r/chemai/torchani-cu117-miniconda3
-* **Github**: XXXX
+* **Tags**: https://hub.docker.com/r/chemai/torchani-cu117-miniconda3/tags
+* **Github**: 
 * **Dockerfile**: 
 * **Image pull command**:
 
@@ -47,7 +48,7 @@ ChemHub Specifications
         docker run \
                -it \
                --name torchani \
-               --runtime=nvidia \
+               --runtime nvidia \
                --gpus all \
                chemai/torchani-cu117-miniconda3:3.3.2023 \
                bash

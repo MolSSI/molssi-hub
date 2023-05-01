@@ -8,7 +8,7 @@ Quick Start
    :local:
    :depth: 2
 
-Using ``chemhub`` is very simple if you are familiar with 
+Using ``MolSSI-AI Container Hub`` is very simple if you are familiar with 
 `dockerhub <https://hub.docker.com/>`_ know how to use 
 `Docker <https://www.docker.com/>`_.
 
@@ -19,8 +19,8 @@ Using ``chemhub`` is very simple if you are familiar with
    a nice `tutorial <https://docs.docker.com/get-started/>`_ series
    to get you up and running, quickly.
 
-Structure of chemhub
-====================
+Structure of MolSSI-AI Container Hub
+====================================
 
 Provide a tree structure and explain what's in one folder, scripts and
 Dockerfile.
