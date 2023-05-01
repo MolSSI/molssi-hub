@@ -9,7 +9,7 @@
 # Authors: Michael Altfield <michael@michaelaltfield.net>
 #          Mohammad Mostafanejad <smostafanejad@vt.edu>
 # Created: 2020-07-17
-# Updated: 2022-10-12
+# Updated: 2023-05-01
 # Version: 0.3
 ################################################################################
  
@@ -116,10 +116,10 @@ cat > "${docroot}/dev/index.html" <<EOF
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Documentation for MolSSI-AI chemhub</title>
+      <title>Documentation for MolSSI-AI Container Hub</title>
    </head>
    <body>
-      <h1>Documentation for MolSSI-AI chemhub</h1>
+      <h1>Documentation for MolSSI-AI Container Hub</h1>
       <h2>Branches</h2>
       <ul>
 EOF
@@ -128,7 +128,7 @@ cat > "${docroot}/dev/versions.html" <<EOF
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Documentation for MolSSI-AI chemhub</title>
+      <title>Documentation for MolSSI-AI Container Hub</title>
    </head>
    <body>
       <ul>

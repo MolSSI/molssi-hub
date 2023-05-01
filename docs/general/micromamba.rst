@@ -16,8 +16,8 @@ Source Specifications
 * **Github**: https://github.com/mamba-org/mamba#micromamba
 * **Documentation**: https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html
 
-ChemHub Specifications
-======================
+MolSSI-AI Container Hub Specifications
+======================================
 
 * **Repository**: https://hub.docker.com/r/chemai/micromamba-py310
 * **Tags**: https://hub.docker.com/r/chemai/micromamba-py310/tags

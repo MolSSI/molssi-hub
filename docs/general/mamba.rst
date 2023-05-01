@@ -16,8 +16,8 @@ Source Specifications
 * **Github**: https://github.com/conda-forge/miniforge-images
 * **Documentation**: https://mamba.readthedocs.io/en/latest
 
-ChemHub Specifications
-======================
+MolSSI-AI Container Hub Specifications
+======================================
 
 * **Repository**: https://hub.docker.com/r/chemai/mamba
 * **Tags**: https://hub.docker.com/r/chemai/mamba/tags
