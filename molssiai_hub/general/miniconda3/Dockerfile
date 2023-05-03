@@ -1,27 +1,7 @@
-FROM debian:bullseye-slim
+FROM molssiai/debian-bullseye-slim-dev:5.2.2023
 
 LABEL maintainer="Mohammad Mostafanejad, \
                   MolSSI-AI, Molecular Sciences Software Institute"
-
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-
-RUN apt-get update -q \
- && apt-get install -q -y --no-install-recommends \
-        bzip2 \
-        ca-certificates \
-        git \
-        libglib2.0-0 \
-        libsm6 \
-        libxext6 \
-        libxrender1 \
-        mercurial \
-        openssh-client \
-        procps \
-        subversion \
-        wget \
-        vim \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
 
 ENV PATH /opt/conda/bin:$PATH
 
