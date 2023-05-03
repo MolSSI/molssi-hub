@@ -3,8 +3,6 @@ FROM molssiai/debian-bullseye-slim-dev:5.2.2023
 LABEL maintainer="Mohammad Mostafanejad, \
                   MolSSI-AI, Molecular Sciences Software Institute"
 
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-
 ENV PATH /opt/conda/bin:$PATH
 
 COPY --from=condaforge/mambaforge /opt/conda /opt/conda
