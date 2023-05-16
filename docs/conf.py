@@ -164,6 +164,37 @@ html_show_copyright = False
 #
 # html_sidebars = {}
 
+def rstjinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    """
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    source[0] = rendered
+
+def setup(app):
+    app.connect("source-read", rstjinja)
+
+json_file_path = []
+for path, subdirs, files in os.walk("../molssiai_hub"):
+    for name in files:
+        if name.endswith(".json"):
+            json_file_path.append(os.path.join(path, name))
+
+import json
+
+html_context = {}
+for jfile in json_file_path:
+    with open(jfile, "r", encoding='utf-8') as f:
+        idx = json.load(f)
+        html_context[idx["name"]] = idx
+
+print(html_context.keys())
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.

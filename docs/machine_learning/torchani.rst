@@ -1,77 +1,68 @@
-.. _torchani:
+{% set page_name = TorchANI.get("name") %}
+.. _{{ page_name }}:
 
-********
-TorchANI
-********
+*************
+{{page_name}}
+*************
 
-TorchANI is a software package based on PyTorch and offers a family 
-of (second-generation) ANI neural network potentials. Supported 
-potentials include `ANI-1`_, `ANI-1x`_, `ANI-1ccx`_ and `ANI-2x`_.
+{% block content %}
+    {{ TorchANI.description }}
+{% endblock content %}
 
 Source Specifications
 =====================
 
-* **Developers**: `Roitberg_Group`_ 
-* **Github**: https://github.com/aiqm/torchani
-* **Documentation**: https://aiqm.github.io/torchani/index.html
+{% block specifications %}
+    {% for dc in TorchANI.source_specifications %}
+        {% for key, value in dc.items() %}
+            * **{{ key }}**: {{ value }}
+        {% endfor %}
+    {% endfor %}
+{% endblock specifications %}
 
 MolSSI-AI Container Hub Specifications
 ======================================
 
-* **Repository**: https://hub.docker.com/r/chemai/torchani-cu117-miniconda3
-* **Tags**: https://hub.docker.com/r/chemai/torchani-cu117-miniconda3/tags
-* **Github**: 
-* **Dockerfile**: 
+{% block hub_specifications %}
+    {% for dc in TorchANI.hub_specifications %}
+        {% for key, value in dc.items() %}
+            * **{{ key }}**: {{ value }}
+        {% endfor %}
+    {% endfor %}
+{% endblock hub_specifications %}
+
 * **Image pull command**:
 
     .. code-block:: bash
 
-        docker pull chemai/torchani-cu117-miniconda3:3.3.2023
+        {{ TorchANI.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        docker run \
-               -it \
-               --name torchani \
-               chemai/torchani-cu117-miniconda3:3.3.2023 \
-               /bin/bash
+        {{ TorchANI.docker_run_command }}
 
 .. note::
 
-    For NVIDIA GPU support with nvidia containers, use the following
-    container run command
-
-    .. code-block:: bash
-        
-        docker run \
-               -it \
-               --name torchani \
-               --runtime nvidia \
-               --gpus all \
-               chemai/torchani-cu117-miniconda3:3.3.2023 \
-               bash
-
-    and then run ``nvidia-smi`` to make sure all available GPUs on the docker host
-    are visible inside the docker container.
+        {{ TorchANI.gpu_note }}
 
 Image Specifications
-^^^^^^^^^^^^^^^^^^^^
+====================
 
-* **OS/Arch**: debian:bullseye-slim (linux/amd64)
-* **Users**: Root
-* **Environment variables**: None
-* **Volumes**: None
-* **Network**: None
-* **Extras**:
-    + Added directories: None
-    + Important packages installed:
-
-.. citations
-
-.. _ANI-1:    https://www.nature.com/articles/sdata2017193
-.. _ANI-1x:   https://aip.scitation.org/doi/abs/10.1063/1.5023802
-.. _ANI-1ccx: https://doi.org/10.26434/chemrxiv.6744440.v1
-.. _ANI-2x:   https://doi.org/10.26434/chemrxiv.11819268.v1
-.. _Roitberg_Group: https://roitberg.chem.ufl.edu
+{% block image_specifications %}
+    {% for dc in TorchANI.image_specifications %}
+        {% for key, value in dc.items() %}
+            {% if key != "Extras" %}
+                * **{{ key }}**: {{ value }}
+            {% else %}
+                * **{{ key }}**:
+                {% for key2 in dc[key] %}
+                    {% for key3, val3 in key2.items() %}
+                        + *{{ key3 }}*: {{ val3 }}
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock image_specifications %}
