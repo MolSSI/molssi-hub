@@ -1,0 +1,37 @@
+{
+    "name": "TorchANI",
+    "description": "TorchANI is a software package based on PyTorch and offers a family of (second-generation) ANI neural network potentials. Supported potentials include `ANI-1 <https://www.nature.com/articles/sdata2017193>`_, `ANI-1x <https://aip.scitation.org/doi/abs/10.1063/1.5023802>`_, `ANI-1ccx <https://doi.org/10.26434/chemrxiv.6744440.v1>`_ and `ANI-2x <https://doi.org/10.26434/chemrxiv.11819268.v1>`_.",
+    "source_specifications": [
+        {
+            "Developers": "`Roitberg_Group <https://roitberg.chem.ufl.edu>`_",
+            "Github": "https://github.com/aiqm/torchani",
+            "Documentation": "https://aiqm.github.io/torchani/index.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/chemai/torchani-cu117-miniconda3",
+            "Tags": "https://hub.docker.com/r/chemai/torchani-cu117-miniconda3/tags",
+            "Github":"",
+            "Dockerfile":""
+        }
+    ],
+    "docker_pull_command": "docker pull chemai/torchani-cu117-miniconda3:3.3.2023",
+    "docker_run_command": "docker run -it --name torchani  chemai/torchani-cu117-miniconda3:3.3.2023 /bin/bash",
+    "gpu_note": "For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables": "None",
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "None"
+                }
+            ]
+        }
+    ]
+}

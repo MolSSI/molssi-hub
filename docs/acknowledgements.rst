@@ -2,7 +2,7 @@
 Acknowledgements
 ****************
 
-The MolSSI-AI ``chemhub`` was developed by Mohammad Mostafanejad at the MolSSI |molssi|,
+The MolSSI-AI ``MolSSI-AI Container Hub`` was developed by Mohammad Mostafanejad at the MolSSI |molssi|,
 which is funded in part by the National Science Foundation |nsf| under grant awards
 CHE-2136142. This work could not have been done without their support!
 
