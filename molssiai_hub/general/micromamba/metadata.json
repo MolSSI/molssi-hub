@@ -1,0 +1,43 @@
+{
+    "name": "Micromamba",
+    "description": "Micromamba is a very compact variant of the mamba package manager. As a statically linked C++ executable with an independent command line interface, micromamba does not need a base environment to operate and is not distributed with a default version of Python.",
+    "source_specifications": [
+        {
+            "Developers": "`QuantStack & mamba contributors <https://quantstack.net/index.html>`_",
+            "Github": "https://github.com/mamba-org/mamba#micromamba",
+            "Documentation": "https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssiai/micromamba142-py310",
+            "Tags": "https://hub.docker.com/r/molssiai/micromamba142-py310/tags",
+            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/micromamba",
+            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/micromamba/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/micromamba142-py310:5.2.2023",
+    "docker_run_command": "docker run -it --name micromamba molssiai/micromamba142-py310:5.2.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/micromamba/bin",
+                    "MAMBA_EXE": "/bin/micromamba",
+                    "MAMBA_ROOT_PREFIX": "/opt/micromamba"
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "Python 3.10"
+                }
+            ]
+        }
+    ]
+}
