@@ -17,7 +17,7 @@
         }
     ],
     "docker_pull_command": "docker pull molssiai/pyscf221-base-mamba141-jupyter:5.15.2023",
-    "docker_run_command": "docker run -it --name torchani molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 /bin/bash",
+    "docker_run_command": "docker run -it --name pyscf molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 /bin/bash",
     "gpu_note": "",
     "image_specifications":[
         {
