@@ -1,0 +1,37 @@
+{
+    "name": "PySCF",
+    "description": "The Python-based Simulations of Chemistry Framework (PySCF) is an open-source collection of electronic structure modules written in Python.",
+    "source_specifications": [
+        {
+            "Developers": "`PySCF Developers Team <https://pyscf.org/about.html>`_",
+            "Github": "https://github.com/pyscf/pyscf",
+            "Documentation": "https://pyscf.org/user.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter",
+            "Tags": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter/tags",
+            "Github":"",
+            "Dockerfile":""
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/pyscf221-base-mamba141-jupyter:5.15.2023",
+    "docker_run_command": "docker run -it --name torchani molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables": "None",
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "None"
+                }
+            ]
+        }
+    ]
+}
