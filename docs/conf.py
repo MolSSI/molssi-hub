@@ -163,7 +163,32 @@ html_show_copyright = False
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+from pathlib import Path
+import json
 
+json_file_path = sorted(Path("../molssiai_hub").glob("**/*.json"))
+html_context = {}
+
+for directory in json_file_path:
+    dir_parts = directory.parts[2:-1]
+    name = dir_parts[-1]
+    mydir = Path(".")
+    for itm in dir_parts: 
+        mydir = mydir.joinpath(itm)
+    with open("./_templates/catalog.rst", "r") as t:
+        target_dir = Path(".")
+        for target in mydir.parts[:-1]:
+            target_dir.joinpath(target)
+        if not target_dir.exists():
+            Path.mkdir(target_dir)
+        my_rst_file = str(target_dir).join(name + ".rst")
+        print(my_rst_file)
+        with open(my_rst_file,"w") as g:
+            g.write(t.read().replace("NAME", name))
+    with open(str(directory.resolve()), "r", encoding='utf-8') as f:
+        idx = json.load(f)
+        html_context[name] = idx
+  
 def rstjinja(app, docname, source):
     """
     Render our pages as a jinja template for fancy templating goodness.
@@ -180,21 +205,6 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.connect("source-read", rstjinja)
 
-json_file_path = []
-for path, subdirs, files in os.walk("../molssiai_hub"):
-    for name in files:
-        if name.endswith(".json"):
-            json_file_path.append(os.path.join(path, name))
-
-import json
-
-html_context = {}
-for jfile in json_file_path:
-    with open(jfile, "r", encoding='utf-8') as f:
-        idx = json.load(f)
-        html_context[idx["name"]] = idx
-
-print(html_context.keys())
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
