@@ -10,26 +10,30 @@
     ],
     "hub_specifications": [
         {
-            "Repository": "https://hub.docker.com/r/chemai/torchani-cu117-miniconda3",
-            "Tags": "https://hub.docker.com/r/chemai/torchani-cu117-miniconda3/tags",
-            "Github":"",
-            "Dockerfile":""
+            "Repository": "https://hub.docker.com/r/molssiai/torchani223-cu117-ase-mamba141-jupyter",
+            "Tags": "https://hub.docker.com/r/molssiai/torchani223-cu117-ase-mamba141-jupyter/tags",
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/machine_learning/torchani",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/machine_learning/torchani/Dockerfile"
         }
     ],
-    "docker_pull_command": "docker pull chemai/torchani-cu117-miniconda3:3.3.2023",
-    "docker_run_command": "docker run -it --name torchani  chemai/torchani-cu117-miniconda3:3.3.2023 /bin/bash",
+    "docker_pull_command": "docker pull molssiai/torchani223-cu117-ase-mamba141-jupyter:5.3.2023",
+    "docker_run_command": "docker run -it --name torchani molssiai/torchani223-cu117-ase-mamba141-jupyter:5.3.2023 /bin/bash",
     "gpu_note": "For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
     "image_specifications":[
         {
             "OS/Arch": "debian:bullseye-slim (linux/amd64)",
             "User(s)": "root",
-            "Environment variables": "None",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
             "Volumes": "None",
             "Network": "None",
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "None"
+                    "Important packages installed": "ASE, jupyterlab, mamba 1.4.1, matplotlib, numpy, scipy, pytorch-cuda 11.7, torchaudio, torchvision"
                 }
             ]
         }
