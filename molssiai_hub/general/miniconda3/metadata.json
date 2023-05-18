@@ -1,0 +1,41 @@
+{
+    "name": "Miniconda 3",
+    "description": "Miniconda is a free minimal installer for conda and a slim bootstrap variant of Anaconda that incorporates conda, Python and their dependencies alongside a few other useful packages including pip and zlib.",
+    "source_specifications": [
+        {
+            "Developers": "`Anaconda, Inc <https://www.anaconda.com>`_",
+            "Github": "https://github.com/ContinuumIO/docker-images/tree/master/miniconda3",
+            "Documentation": "https://docs.conda.io/en/latest/miniconda.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssiai/miniconda3",
+            "Tags": "https://hub.docker.com/r/molssiai/miniconda3/tags",
+            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/miniconda3",
+            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/miniconda3/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/miniconda3:5.2.2023",
+    "docker_run_command": "docker run -it --name miniconda3 molssiai/miniconda3:5.2.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "None"
+                }
+            ]
+        }
+    ]
+}

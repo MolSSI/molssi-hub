@@ -1,0 +1,41 @@
+{
+    "name": "Mamba",
+    "description": "Mamba is a fast, robust, and cross-platform package manager. It supports Windows, OS X and Linux (ARM64 and PPC64LE) and is compatible with conda packages and covers most conda commands.",
+    "source_specifications": [
+        {
+            "Developers": "`QuantStack & mamba contributors <https://quantstack.net/index.html>`_",
+            "Github": "https://github.com/conda-forge/miniforge-images",
+            "Documentation": "https://mamba.readthedocs.io/en/latest"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssiai/mamba141",
+            "Tags": "https://hub.docker.com/r/molssiai/mamba141/tags",
+            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/mamba",
+            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/mamba/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/mamba141:5.2.2023",
+    "docker_run_command": "docker run -it --name mamba molssiai/mamba141:5.2.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "None"
+                }
+            ]
+        }
+    ]
+}
