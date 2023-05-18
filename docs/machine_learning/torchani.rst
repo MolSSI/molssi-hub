@@ -1,19 +1,19 @@
-{% set page_name = TorchANI.get("name") %}
-.. _{{ page_name }}:
+{% set title = torchani.get("name") %}
+.. _ torchani:
 
 *************
-{{page_name}}
+{{title}}
 *************
 
 {% block content %}
-    {{ TorchANI.description }}
+    {{ torchani.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in TorchANI.source_specifications %}
+    {% for dc in torchani.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in TorchANI.hub_specifications %}
+    {% for dc in torchani.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,23 +35,27 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ TorchANI.docker_pull_command }}
+        {{ torchani.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ TorchANI.docker_run_command }}
+        {{ torchani.docker_run_command }}
 
+{% block note %}
+{% if torchani.gpu_note != "" %}
 .. note::
 
-        {{ TorchANI.gpu_note }}
+        {{ torchani.gpu_note }}
+{% endif %}
+{% endblock note %}
 
 Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in TorchANI.image_specifications %}
+    {% for dc in torchani.image_specifications %}
         {% for key, value in dc.items() %}
             {% if key != "Extras" %}
                 * **{{ key }}**: {{ value }}
