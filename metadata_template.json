@@ -1,0 +1,41 @@
+{
+    "name": "",
+    "description": "",
+    "source_specifications": [
+        {
+            "Developers": "",
+            "Github": "",
+            "Documentation": ""
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "",
+            "Tags": "",
+            "Github":"",
+            "Dockerfile":""
+        }
+    ],
+    "docker_pull_command": "",
+    "docker_run_command": "",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "",
+            "User(s)": "",
+            "Environment variables":  [
+                {
+                    "PATH":""
+                }
+            ],
+            "Volumes": "",
+            "Network": "",
+            "Extras": [
+                {
+                    "Added directories": "",
+                    "Important packages installed": ""
+                }
+            ]
+        }
+    ]
+}
