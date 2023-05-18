@@ -1,19 +1,19 @@
-{% set title = pyscf.get("name") %}
-.. _ pyscf:
+{% set title = NAME.get("name") %}
+.. _ NAME:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ pyscf.description }}
+    {{ NAME.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in pyscf.source_specifications %}
+    {% for dc in NAME.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in pyscf.hub_specifications %}
+    {% for dc in NAME.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ pyscf.docker_pull_command }}
+        {{ NAME.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ pyscf.docker_run_command }}
+        {{ NAME.docker_run_command }}
 
 {% block note %}
-{% if pyscf.gpu_note != "" %}
+{% if NAME.gpu_note != "" %}
 .. note::
 
-        {{ pyscf.gpu_note }}
+        {{ NAME.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,7 +55,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in pyscf.image_specifications %}
+    {% for dc in NAME.image_specifications %}
         {% for key, value in dc.items() %}
             {% if key != "Extras" %}
                 * **{{ key }}**: {{ value }}

@@ -178,11 +178,10 @@ for directory in json_file_path:
     with open("./_templates/catalog.rst", "r") as t:
         target_dir = Path(".")
         for target in mydir.parts[:-1]:
-            target_dir.joinpath(target)
+            target_dir = target_dir.joinpath(target)
         if not target_dir.exists():
             Path.mkdir(target_dir)
-        my_rst_file = str(target_dir).join(name + ".rst")
-        print(my_rst_file)
+        my_rst_file = str(target_dir) + "/" + name + ".rst"
         with open(my_rst_file,"w") as g:
             g.write(t.read().replace("NAME", name))
     with open(str(directory.resolve()), "r", encoding='utf-8') as f:
