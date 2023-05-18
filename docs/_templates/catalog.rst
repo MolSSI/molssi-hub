@@ -57,7 +57,7 @@ Image Specifications
 {% block image_specifications %}
     {% for dc in NAME.image_specifications %}
         {% for key, value in dc.items() %}
-            {% if key != "Extras" %}
+            {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
             {% else %}
                 * **{{ key }}**:

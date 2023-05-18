@@ -1,6 +1,6 @@
 {
     "name": "PySCF",
-    "description": "The Python-based Simulations of Chemistry Framework (PySCF) is an open-source collection of electronic structure modules written in Python.",
+    "description": "The `Python-based Simulations of Chemistry Framework (PySCF) <https://doi.org/10.1063/5.0006074>`_ is an open-source collection of electronic structure modules written in Python.",
     "source_specifications": [
         {
             "Developers": "`PySCF Developers Team <https://pyscf.org/about.html>`_",
@@ -12,8 +12,8 @@
         {
             "Repository": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter",
             "Tags": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter/tags",
-            "Github":"",
-            "Dockerfile":""
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/pyscf",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/compchem/pyscf/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssiai/pyscf221-base-mamba141-jupyter:5.15.2023",
@@ -23,13 +23,17 @@
         {
             "OS/Arch": "debian:bullseye-slim (linux/amd64)",
             "User(s)": "root",
-            "Environment variables": "None",
+            "Environment variables": [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
             "Volumes": "None",
             "Network": "None",
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "None"
+                    "Important packages installed": "mamba 1.4.1, jupyterlab"
                 }
             ]
         }
