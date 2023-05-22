@@ -115,11 +115,11 @@ html_theme_options = {
     "github_url": "https://github.com/molssi-ai/molssiai_hub",
     "twitter_url": "https://twitter.com/MolSSI_NSF",
     "logo": {
-    "image_light": "molssi_main_logo.png",
-    "image_dark": "molssi_main_logo_inverted_white.png",
+    "image_light": "molssi_ai.svg",
+    "image_dark": "molssi_ai.svg",
     "text": "",
-    "molssi_light": "molssi_main_logo.png",
-    "molssi_dark": "molssi_main_logo_inverted_white.png",
+    "molssi_light": "molssi_ai.svg",
+    "molssi_dark": "molssi_ai.svg",
     },
     "show_toc_level": 2,
     "header_links_before_dropdown": 4,
@@ -133,7 +133,7 @@ html_theme_options = {
 }
 
 # Path to project's logo
-html_logo = "_static/molssi_main_logo.png"
+html_logo = "_static/molssi_ai.svg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
