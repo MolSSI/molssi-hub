@@ -12,3 +12,4 @@ construct and run containerized computational chemistry software.
     :titlesonly:
        
     pyscf
+    psi4_mamba141_py310
