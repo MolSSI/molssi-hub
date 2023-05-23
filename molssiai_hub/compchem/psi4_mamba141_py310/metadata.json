@@ -1,0 +1,41 @@
+{
+    "name": "PSI4",
+    "description": "PSI4 is an open-source quantum chemistry program package designed for efficient ab initio simulation molecular properties. PSI4 is capable of performing large-scale computations with >2500 basis functions on multi-core machines.",
+    "source_specifications": [
+        {
+            "Developers": "`PSI4 contributors <https://github.com/psi4/psi4/graphs/contributors>`_",
+            "Github": "https://github.com/psi4/psi4",
+            "Documentation": "https://psicode.org/psi4manual/master/index.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssiai/psi4v18-mamba141-py310",
+            "Tags": "https://hub.docker.com/r/molssiai/psi4v18-mamba141-py310/tags",
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/psi4_mamba141_py310",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/compchem/psi4_mamba141_py310/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/psi4v18-mamba141-py310:5.23.2023",
+    "docker_run_command": "docker run -it --name psi4 molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables": [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "mamba 1.4.1"
+                }
+            ]
+        }
+    ]
+}

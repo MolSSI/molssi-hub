@@ -21,8 +21,29 @@ from molssiai_hub._version import get_versions
 revision = get_versions()['version']
 del get_versions
 
-# -- Project information -----------------------------------------------------
+# Get all json files from ../molssiai_hub and store them
+# in html_context variable for further processing in jinja 
+# templates in _template folder
+from docs import json2jinja
+html_context = json2jinja.html_context_generator(json_file_path="../molssiai_hub")
 
+def rst2jinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    """
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    source[0] = rendered
+
+def setup(app):
+    app.connect("source-read", rst2jinja)
+
+# -- Project information -----------------------------------------------------
 project = "molssiai_hub"
 author = "Mohammad Mostafanejad"
 
@@ -115,11 +136,11 @@ html_theme_options = {
     "github_url": "https://github.com/molssi-ai/molssiai_hub",
     "twitter_url": "https://twitter.com/MolSSI_NSF",
     "logo": {
-    "image_light": "molssi_ai.svg",
-    "image_dark": "molssi_ai.svg",
+    "image_light": "_static/molssi_ai.svg",
+    "image_dark": "_static/molssi_ai.svg",
     "text": "",
-    "molssi_light": "molssi_ai.svg",
-    "molssi_dark": "molssi_ai.svg",
+    "molssi_light": "_static/molssi_ai.svg",
+    "molssi_dark": "_static/molssi_ai.svg",
     },
     "show_toc_level": 2,
     "header_links_before_dropdown": 4,
@@ -163,46 +184,6 @@ html_show_copyright = False
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-from pathlib import Path
-import json
-
-json_file_path = sorted(Path("../molssiai_hub").glob("**/*.json"))
-html_context = {}
-
-for directory in json_file_path:
-    dir_parts = directory.parts[2:-1]
-    name = dir_parts[-1]
-    mydir = Path(".")
-    for itm in dir_parts: 
-        mydir = mydir.joinpath(itm)
-    with open("./_templates/catalog.rst", "r") as t:
-        target_dir = Path(".")
-        for target in mydir.parts[:-1]:
-            target_dir = target_dir.joinpath(target)
-        if not target_dir.exists():
-            Path.mkdir(target_dir)
-        my_rst_file = str(target_dir) + "/" + name + ".rst"
-        with open(my_rst_file,"w") as g:
-            g.write(t.read().replace("NAME", name))
-    with open(str(directory.resolve()), "r", encoding='utf-8') as f:
-        idx = json.load(f)
-        html_context[name] = idx
-  
-def rstjinja(app, docname, source):
-    """
-    Render our pages as a jinja template for fancy templating goodness.
-    """
-    # Make sure we're outputting HTML
-    if app.builder.format != 'html':
-        return
-    src = source[0]
-    rendered = app.builder.templates.render_string(
-        src, app.config.html_context
-    )
-    source[0] = rendered
-
-def setup(app):
-    app.connect("source-read", rstjinja)
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
