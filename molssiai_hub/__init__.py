@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-chemhub
-Container hub for computational molecular science
+MolSSI-AI Container Hub for computational molecular science
 """
 
 import textwrap
