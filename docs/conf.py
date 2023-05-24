@@ -133,7 +133,7 @@ html_theme = 'pydata_sphinx_theme'
 #     'titles_only': False
 # }
 html_theme_options = {
-    "github_url": "https://github.com/molssi-ai/molssiai_hub",
+    "github_url": "https://github.com/molssi-ai/molssi-ai-hub",
     "twitter_url": "https://twitter.com/MolSSI_NSF",
     "logo": {
     "image_light": "_static/molssi_ai.svg",
