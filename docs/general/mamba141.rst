@@ -1,9 +1,9 @@
 {% set title = mamba141.get("name") %}
 .. _mamba141:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ mamba141.description }}

@@ -1,9 +1,9 @@
 {% set title = NAME.get("name") %}
 .. _NAME:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ NAME.description }}

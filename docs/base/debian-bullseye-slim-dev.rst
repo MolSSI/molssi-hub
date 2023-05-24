@@ -1,19 +1,19 @@
-{% set title = pyscf221_base_mamba141_jupyter.get("name") %}
-.. _pyscf221_base_mamba141_jupyter:
+{% set title = debian_bullseye_slim_dev.get("name") %}
+.. _debian_bullseye_slim_dev:
 
 **************************
 {{title}}
 **************************
 
 {% block content %}
-    {{ pyscf221_base_mamba141_jupyter.description }}
+    {{ debian_bullseye_slim_dev.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.source_specifications %}
+    {% for dc in debian_bullseye_slim_dev.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.hub_specifications %}
+    {% for dc in debian_bullseye_slim_dev.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ pyscf221_base_mamba141_jupyter.docker_pull_command }}
+        {{ debian_bullseye_slim_dev.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ pyscf221_base_mamba141_jupyter.docker_run_command }}
+        {{ debian_bullseye_slim_dev.docker_run_command }}
 
 {% block note %}
-{% if pyscf221_base_mamba141_jupyter.gpu_note != "" %}
+{% if debian_bullseye_slim_dev.gpu_note != "" %}
 .. note::
 
-        {{ pyscf221_base_mamba141_jupyter.gpu_note }}
+        {{ debian_bullseye_slim_dev.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,7 +55,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.image_specifications %}
+    {% for dc in debian_bullseye_slim_dev.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

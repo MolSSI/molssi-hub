@@ -1,0 +1,32 @@
+{
+    "name": "Debian Bullseye Slim",
+    "description": "Official builds of debuerreotype-generated Debian `tarballs <https://docker.debian.net/>`_ for use in Docker (Bullseye Slim version).",
+    "source_specifications": [
+        {
+            "Developers": "Debian Developers `tianon <https://qa.debian.org/developer.php?login=tianon>`_ and `paultag <https://qa.debian.org/developer.php?login=paultag>`_",
+            "Github": "https://github.com/debuerreotype/docker-debian-artifacts/tree/4648ad5c6feb1318b8a6c31502ebde8bb18ebb5e/bullseye/slim",
+            "Documentation": "https://en.wikipedia.org/wiki/Debian"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/repository/docker/molssiai/debian-bullseye-slim-dev/general",
+            "Tags": "https://hub.docker.com/repository/docker/molssiai/debian-bullseye-slim-dev/tags",
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/base/debian-bullseye-slim-dev",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/base/debian-bullseye-slim-dev/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/debian-bullseye-slim-dev:5.2.2023",
+    "docker_run_command": "docker run -it --name debian molssiai/debian-bullseye-slim-dev:5.2.2023 /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim",
+            "User(s)": "root",
+            "Environment variables": "None",
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": "None"
+        }
+    ]
+}

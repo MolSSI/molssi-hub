@@ -1,9 +1,9 @@
 {% set title = psi4v18_mamba141_py310.get("name") %}
 .. _psi4v18_mamba141_py310:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ psi4v18_mamba141_py310.description }}

@@ -3,7 +3,7 @@
     "description": "MOPAC (Molecular Orbital PACkage) is a semiempirical quantum chemistry program based on Dewar and Thiel's NDDO approximation.",
     "source_specifications": [
         {
-            "Developers": "`MOPAC Contributors <https://github.com/openmopac/mopac/graphs/contributors>_`",
+            "Developers": "`MOPAC Contributors <https://github.com/openmopac/mopac/graphs/contributors>`_",
             "Github": "https://github.com/openmopac/mopac",
             "Documentation": "http://openmopac.net/manual/index.html"
         }

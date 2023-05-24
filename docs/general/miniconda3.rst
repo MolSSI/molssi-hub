@@ -1,9 +1,9 @@
 {% set title = miniconda3.get("name") %}
 .. _miniconda3:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ miniconda3.description }}
