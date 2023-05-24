@@ -12,8 +12,8 @@
         {
             "Repository": "https://hub.docker.com/r/molssiai/mamba141",
             "Tags": "https://hub.docker.com/r/molssiai/mamba141/tags",
-            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/mamba",
-            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/mamba/Dockerfile"
+            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/mamba141",
+            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/mamba141/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssiai/mamba141:5.2.2023",

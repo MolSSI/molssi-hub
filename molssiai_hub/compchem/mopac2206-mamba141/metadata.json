@@ -1,0 +1,41 @@
+{
+    "name": "MOPAC",
+    "description": "MOPAC (Molecular Orbital PACkage) is a semiempirical quantum chemistry program based on Dewar and Thiel's NDDO approximation.",
+    "source_specifications": [
+        {
+            "Developers": "`MOPAC Contributors <https://github.com/openmopac/mopac/graphs/contributors>_`",
+            "Github": "https://github.com/openmopac/mopac",
+            "Documentation": "http://openmopac.net/manual/index.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/repository/docker/molssiai/mopac2206-mamba141/general",
+            "Tags": "https://hub.docker.com/repository/docker/molssiai/mopac2206-mamba141/tags",
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/mopac2206-mamba141",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/mopac2206-mamba141/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssiai/mopac2206-mamba141:latest",
+    "docker_run_command": "docker run -it --name mopac molssiai/mopac2206-mamba141:latest /bin/bash",
+    "gpu_note": "",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "User(s)": "root",
+            "Environment variables": [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "mamba 1.4.1"
+                }
+            ]
+        }
+    ]
+}

@@ -12,8 +12,8 @@
         {
             "Repository": "https://hub.docker.com/r/molssiai/micromamba142-py310",
             "Tags": "https://hub.docker.com/r/molssiai/micromamba142-py310/tags",
-            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/micromamba",
-            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/micromamba/Dockerfile"
+            "Github": "https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/general/micromamba142-py310",
+            "Dockerfile": "https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/general/micromamba142-py310/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssiai/micromamba142-py310:5.2.2023",

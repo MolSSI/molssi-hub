@@ -12,8 +12,8 @@
         {
             "Repository": "https://hub.docker.com/r/molssiai/torchani223-cu117-ase-mamba141-jupyter",
             "Tags": "https://hub.docker.com/r/molssiai/torchani223-cu117-ase-mamba141-jupyter/tags",
-            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/machine_learning/torchani",
-            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/machine_learning/torchani/Dockerfile"
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssiai/torchani223-cu117-ase-mamba141-jupyter:5.3.2023",
