@@ -1,16 +1,15 @@
 .. _dev-team:
 
-******************
-chemhub Developers
-******************
+**********
+Developers
+**********
 
-``chemhub`` is a free and open-source container hub that is mainly developed by
-Mohammad Mostafanejad at the Molecular Sciences Software Institute (MolSSI).
-As it is built for boosting productivity and promoting reproducibility in 
-scientific research and discovery across all domains of STEM community and
-in particular, computational molecular sciences (CMS), we welcome any 
-feedback and contributions from the members of the CMS community in both 
-academia and industry.
+The MolSSI-AI Container Hub is a free and open-source repository that is 
+built for boosting productivity and promoting reproducibility in scientific 
+research and discovery across all domains of STEM community, in particular,
+computational molecular scienc (CMS). We welcome any feedback and 
+contributions from the members of the CMS community in both academia and 
+industry.
 
 Lead Maintainers
 ================

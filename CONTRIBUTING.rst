@@ -1,21 +1,17 @@
 .. highlight:: shell
 
-============
-Contributing
-============
+==========
+Contribute
+==========
 
-Contributions are welcome, and they are greatly appreciated! Every
-little bit helps, and credit will always be given.
-
-You can contribute in many ways:
-
-Types of Contributions
-----------------------
+In order to submit your recipes for containerized sofware,
+please follow the instructions 
+[here](https://molssi-ai.github.io/molssi-ai-hub/contribute.html)
 
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/molssi-ai/chemhub/issues.
+Report bugs at https://github.com/molssi-ai/molssi-ai-hub/issues.
 
 If you are reporting a bug, please include:
 
