@@ -1,19 +1,19 @@
-{% set title = miniconda3.get("name") %}
-.. _miniconda3:
+{% set title = micromamba142_py310.get("name") %}
+.. _micromamba142_py310:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ miniconda3.description }}
+    {{ micromamba142_py310.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in miniconda3.source_specifications %}
+    {% for dc in micromamba142_py310.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in miniconda3.hub_specifications %}
+    {% for dc in micromamba142_py310.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_pull_command }}
+        {{ micromamba142_py310.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_run_command }}
+        {{ micromamba142_py310.docker_run_command }}
 
 {% block note %}
-{% if miniconda3.gpu_note != "" %}
+{% if micromamba142_py310.gpu_note != "" %}
 .. note::
 
-        {{ miniconda3.gpu_note }}
+        {{ micromamba142_py310.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,7 +55,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in miniconda3.image_specifications %}
+    {% for dc in micromamba142_py310.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

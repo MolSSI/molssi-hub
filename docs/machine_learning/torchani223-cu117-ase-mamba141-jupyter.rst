@@ -1,19 +1,19 @@
-{% set title = torchani.get("name") %}
-.. _ torchani:
+{% set title = torchani223_cu117_ase_mamba141_jupyter.get("name") %}
+.. _torchani223_cu117_ase_mamba141_jupyter:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ torchani.description }}
+    {{ torchani223_cu117_ase_mamba141_jupyter.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in torchani.source_specifications %}
+    {% for dc in torchani223_cu117_ase_mamba141_jupyter.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in torchani.hub_specifications %}
+    {% for dc in torchani223_cu117_ase_mamba141_jupyter.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ torchani.docker_pull_command }}
+        {{ torchani223_cu117_ase_mamba141_jupyter.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ torchani.docker_run_command }}
+        {{ torchani223_cu117_ase_mamba141_jupyter.docker_run_command }}
 
 {% block note %}
-{% if torchani.gpu_note != "" %}
+{% if torchani223_cu117_ase_mamba141_jupyter.gpu_note != "" %}
 .. note::
 
-        {{ torchani.gpu_note }}
+        {{ torchani223_cu117_ase_mamba141_jupyter.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,9 +55,9 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in torchani.image_specifications %}
+    {% for dc in torchani223_cu117_ase_mamba141_jupyter.image_specifications %}
         {% for key, value in dc.items() %}
-            {% if key != "Extras" %}
+            {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
             {% else %}
                 * **{{ key }}**:
