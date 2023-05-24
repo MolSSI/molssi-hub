@@ -10,6 +10,7 @@ construct and run containerized computational chemistry software.
 .. toctree::
     :maxdepth: 2
     :titlesonly:
-       
+    
+    mopac2206-mamba141
     psi4v18-mamba141-py310
     pyscf221-base-mamba141-jupyter
