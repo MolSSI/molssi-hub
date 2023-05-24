@@ -28,6 +28,7 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
     installation
     quick_start
     contribute
+    base/index
     compchem/index
     general/index
     machine_learning/index

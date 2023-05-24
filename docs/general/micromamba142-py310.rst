@@ -1,9 +1,9 @@
 {% set title = micromamba142_py310.get("name") %}
 .. _micromamba142_py310:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ micromamba142_py310.description }}

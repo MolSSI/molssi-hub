@@ -1,9 +1,9 @@
 {% set title = torchani223_cu117_ase_mamba141_jupyter.get("name") %}
 .. _torchani223_cu117_ase_mamba141_jupyter:
 
-*************
+**************************
 {{title}}
-*************
+**************************
 
 {% block content %}
     {{ torchani223_cu117_ase_mamba141_jupyter.description }}
