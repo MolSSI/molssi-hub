@@ -1,5 +1,5 @@
 {% set title = NAME.get("name") %}
-.. _ NAME:
+.. _NAME:
 
 *************
 {{title}}

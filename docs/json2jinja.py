@@ -24,6 +24,9 @@ def html_context_generator(json_file_path=Path("../molssiai_hub")):
             if not target_dir.exists():
                 Path.mkdir(target_dir)
             my_rst_file = str(target_dir) + "/" + name + ".rst"
+            # this is to help html context rendering in conf.py
+            # otherwise there will be an error
+            name = name.replace("-", "_")
             with open(my_rst_file,"w") as g:
                 g.write(t.read().replace("NAME", name))
         with open(str(directory.resolve()), "r", encoding='utf-8') as f:

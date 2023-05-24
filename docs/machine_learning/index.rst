@@ -12,5 +12,5 @@ covenient and reproducible way.
     :maxdepth: 2
     :titlesonly:
        
-    torchani
+    torchani223-cu117-ase-mamba141-jupyter
     torchani_dev
