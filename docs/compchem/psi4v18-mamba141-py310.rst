@@ -1,19 +1,19 @@
-{% set title = pyscf.get("name") %}
-.. _ pyscf:
+{% set title = psi4v18_mamba141_py310.get("name") %}
+.. _psi4v18_mamba141_py310:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ pyscf.description }}
+    {{ psi4v18_mamba141_py310.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in pyscf.source_specifications %}
+    {% for dc in psi4v18_mamba141_py310.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in pyscf.hub_specifications %}
+    {% for dc in psi4v18_mamba141_py310.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ pyscf.docker_pull_command }}
+        {{ psi4v18_mamba141_py310.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ pyscf.docker_run_command }}
+        {{ psi4v18_mamba141_py310.docker_run_command }}
 
 {% block note %}
-{% if pyscf.gpu_note != "" %}
+{% if psi4v18_mamba141_py310.gpu_note != "" %}
 .. note::
 
-        {{ pyscf.gpu_note }}
+        {{ psi4v18_mamba141_py310.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,9 +55,9 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in pyscf.image_specifications %}
+    {% for dc in psi4v18_mamba141_py310.image_specifications %}
         {% for key, value in dc.items() %}
-            {% if key != "Extras" %}
+            {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
             {% else %}
                 * **{{ key }}**:

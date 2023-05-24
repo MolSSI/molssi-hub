@@ -1,19 +1,19 @@
-{% set title = miniconda3.get("name") %}
-.. _miniconda3:
+{% set title = mamba141.get("name") %}
+.. _mamba141:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ miniconda3.description }}
+    {{ mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in miniconda3.source_specifications %}
+    {% for dc in mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in miniconda3.hub_specifications %}
+    {% for dc in mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_pull_command }}
+        {{ mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_run_command }}
+        {{ mamba141.docker_run_command }}
 
 {% block note %}
-{% if miniconda3.gpu_note != "" %}
+{% if mamba141.gpu_note != "" %}
 .. note::
 
-        {{ miniconda3.gpu_note }}
+        {{ mamba141.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,7 +55,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in miniconda3.image_specifications %}
+    {% for dc in mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

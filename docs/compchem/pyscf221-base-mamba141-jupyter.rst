@@ -1,19 +1,19 @@
-{% set title = miniconda3.get("name") %}
-.. _miniconda3:
+{% set title = pyscf221_base_mamba141_jupyter.get("name") %}
+.. _pyscf221_base_mamba141_jupyter:
 
 *************
 {{title}}
 *************
 
 {% block content %}
-    {{ miniconda3.description }}
+    {{ pyscf221_base_mamba141_jupyter.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in miniconda3.source_specifications %}
+    {% for dc in pyscf221_base_mamba141_jupyter.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -24,7 +24,7 @@ MolSSI-AI Container Hub Specifications
 ======================================
 
 {% block hub_specifications %}
-    {% for dc in miniconda3.hub_specifications %}
+    {% for dc in pyscf221_base_mamba141_jupyter.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -35,19 +35,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_pull_command }}
+        {{ pyscf221_base_mamba141_jupyter.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ miniconda3.docker_run_command }}
+        {{ pyscf221_base_mamba141_jupyter.docker_run_command }}
 
 {% block note %}
-{% if miniconda3.gpu_note != "" %}
+{% if pyscf221_base_mamba141_jupyter.gpu_note != "" %}
 .. note::
 
-        {{ miniconda3.gpu_note }}
+        {{ pyscf221_base_mamba141_jupyter.gpu_note }}
 {% endif %}
 {% endblock note %}
 
@@ -55,7 +55,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in miniconda3.image_specifications %}
+    {% for dc in pyscf221_base_mamba141_jupyter.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
