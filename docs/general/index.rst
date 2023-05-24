@@ -12,5 +12,5 @@ construct and run containerized software of general purpose.
     :titlesonly:
        
     miniconda3
-    mamba
-    micromamba
+    mamba141
+    micromamba142-py310
