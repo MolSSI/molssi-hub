@@ -12,8 +12,8 @@
         {
             "Repository": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter",
             "Tags": "https://hub.docker.com/r/molssiai/pyscf221-base-mamba141-jupyter/tags",
-            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/pyscf",
-            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/compchem/pyscf/Dockerfile"
+            "Github":"https://github.com/molssi-ai/molssi-ai-hub/tree/main/molssiai_hub/compchem/pyscf221-base-mamba141-jupyter",
+            "Dockerfile":"https://github.com/molssi-ai/molssi-ai-hub/blob/main/molssiai_hub/compchem/pyscf221-base-mamba141-jupyter/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssiai/pyscf221-base-mamba141-jupyter:5.15.2023",
