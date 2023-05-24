@@ -35,7 +35,7 @@ such as PySCF and PSI4, your folder structure should have the following from
    │   │   └── metadata.json
 
 That is, both folders **psi4v18-mamba141-py310** and **pyscf221-base-mamba141-jupyter**
-are a subfolder of **compchem** category and will have their own **Dockerfile** and 
+are subfolders of **compchem** category and will have their own **Dockerfile** and 
 **metadata.json** files. If everything is sorted properly, our CI workflow will pickup
 the information stored in the metadata JSON files and process them into templated
 `catalog pages <https://molssi-ai.github.io/molssi-ai-hub>`_.
