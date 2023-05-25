@@ -26,11 +26,11 @@ such as PySCF and PSI4, your folder structure should have the following from
 .. code-block:: bash
 
    molssiai_hub/
-   |   ├── compchem
-   │   ├── psi4v18-mamba141-py310
+   ├── compchem/
+   │   ├── psi4v18-mamba141-py310/
    │   │   ├── Dockerfile
    │   │   └── metadata.json
-   │   ├── pyscf221-base-mamba141-jupyter
+   │   ├── pyscf221-base-mamba141-jupyter/
    │   │   ├── Dockerfile
    │   │   └── metadata.json
 
