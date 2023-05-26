@@ -53,7 +53,7 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    .. grid-item-card:: MolSSI-AI Container Hub
       :margin: 0 3 0 0
 
-      MolSSI-AI container recipes for molecular science
+      MolSSI-AI image registry for molecular science
 
       .. button-link:: https://hub.docker.com/u/molssiai
         :color: primary
@@ -70,18 +70,18 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
         :color: primary
         :expand:
 
-        API Reference
+        Machine Learning
 
    .. grid-item-card::  Computational Chemistry
       :margin: 0 3 0 0
 
-      Containers for open-source QC software
+      Image recipes for computational chemistry
 
       .. button-link:: ./compchem/index.html
         :color: primary
         :expand:
 
-        Developer Guide
+        Computational Chemistry
 
 .. list-table:: **Stay in Touch**
    :widths: 10 10 10 10
@@ -105,7 +105,7 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    :width: 90
 
 .. |MolSSI-AI Hub| image:: images/docker.svg
-   :target: https://hub.docker.com/u/chemai
+   :target: https://hub.docker.com/u/molssiai
    :alt: MolSSI-AI Container Hub
    :width: 110
 

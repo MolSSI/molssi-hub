@@ -44,10 +44,10 @@ MolSSI-AI Container Hub Specifications
         {{ miniconda3.docker_run_command }}
 
 {% block note %}
-{% if miniconda3.gpu_note != "" %}
+{% if miniconda3.note != "" %}
 .. note::
 
-        {{ miniconda3.gpu_note }}
+        {{ miniconda3.note }}
 {% endif %}
 {% endblock note %}
 

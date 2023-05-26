@@ -44,10 +44,10 @@ MolSSI-AI Container Hub Specifications
         {{ micromamba142_py310.docker_run_command }}
 
 {% block note %}
-{% if micromamba142_py310.gpu_note != "" %}
+{% if micromamba142_py310.note != "" %}
 .. note::
 
-        {{ micromamba142_py310.gpu_note }}
+        {{ micromamba142_py310.note }}
 {% endif %}
 {% endblock note %}
 

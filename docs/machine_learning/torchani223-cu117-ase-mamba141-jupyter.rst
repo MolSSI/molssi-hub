@@ -44,10 +44,10 @@ MolSSI-AI Container Hub Specifications
         {{ torchani223_cu117_ase_mamba141_jupyter.docker_run_command }}
 
 {% block note %}
-{% if torchani223_cu117_ase_mamba141_jupyter.gpu_note != "" %}
+{% if torchani223_cu117_ase_mamba141_jupyter.note != "" %}
 .. note::
 
-        {{ torchani223_cu117_ase_mamba141_jupyter.gpu_note }}
+        {{ torchani223_cu117_ase_mamba141_jupyter.note }}
 {% endif %}
 {% endblock note %}
 
