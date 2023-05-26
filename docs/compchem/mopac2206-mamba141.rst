@@ -44,10 +44,10 @@ MolSSI-AI Container Hub Specifications
         {{ mopac2206_mamba141.docker_run_command }}
 
 {% block note %}
-{% if mopac2206_mamba141.gpu_note != "" %}
+{% if mopac2206_mamba141.note != "" %}
 .. note::
 
-        {{ mopac2206_mamba141.gpu_note }}
+        {{ mopac2206_mamba141.note }}
 {% endif %}
 {% endblock note %}
 

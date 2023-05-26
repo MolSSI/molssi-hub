@@ -44,10 +44,10 @@ MolSSI-AI Container Hub Specifications
         {{ debian_bullseye_slim_dev.docker_run_command }}
 
 {% block note %}
-{% if debian_bullseye_slim_dev.gpu_note != "" %}
+{% if debian_bullseye_slim_dev.note != "" %}
 .. note::
 
-        {{ debian_bullseye_slim_dev.gpu_note }}
+        {{ debian_bullseye_slim_dev.note }}
 {% endif %}
 {% endblock note %}
 

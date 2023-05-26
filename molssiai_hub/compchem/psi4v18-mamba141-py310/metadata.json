@@ -17,8 +17,8 @@
         }
     ],
     "docker_pull_command": "docker pull molssiai/psi4v18-mamba141-py310:5.23.2023",
-    "docker_run_command": "docker run -it --name psi4 molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash",
-    "gpu_note": "",
+    "docker_run_command": "docker run -it --name psi4 -v $(pwd):/home molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
     "image_specifications":[
         {
             "OS/Arch": "debian:bullseye-slim (linux/amd64)",
@@ -28,7 +28,7 @@
                     "PATH":"/opt/conda/bin"
                 }
             ],
-            "Volumes": "None",
+            "Volumes": "$(pwd):/home",
             "Network": "None",
             "Extras": [
                 {

@@ -105,7 +105,7 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    :width: 90
 
 .. |MolSSI-AI Hub| image:: images/docker.svg
-   :target: https://hub.docker.com/u/chemai
+   :target: https://hub.docker.com/u/molssiai
    :alt: MolSSI-AI Container Hub
    :width: 110
 
