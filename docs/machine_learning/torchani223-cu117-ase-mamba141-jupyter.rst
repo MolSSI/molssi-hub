@@ -1,9 +1,13 @@
-{% set title = torchani223_cu117_ase_mamba141_jupyter.get("name") %}
 .. _torchani223_cu117_ase_mamba141_jupyter:
 
-**************************
+*********************************************************
+{{ torchani223_cu117_ase_mamba141_jupyter.hub_specifications[0]["Github"].split("/")[-1] }}
+*********************************************************
+
+{% set title = torchani223_cu117_ase_mamba141_jupyter.get("name") %}
+
 {{title}}
-**************************
+=========================================================
 
 {% block content %}
     {{ torchani223_cu117_ase_mamba141_jupyter.description }}

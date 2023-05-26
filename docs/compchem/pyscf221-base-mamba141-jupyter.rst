@@ -1,9 +1,13 @@
-{% set title = pyscf221_base_mamba141_jupyter.get("name") %}
 .. _pyscf221_base_mamba141_jupyter:
 
-**************************
+*********************************************************
+{{ pyscf221_base_mamba141_jupyter.hub_specifications[0]["Github"].split("/")[-1] }}
+*********************************************************
+
+{% set title = pyscf221_base_mamba141_jupyter.get("name") %}
+
 {{title}}
-**************************
+=========================================================
 
 {% block content %}
     {{ pyscf221_base_mamba141_jupyter.description }}
