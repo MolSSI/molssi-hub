@@ -1,9 +1,13 @@
-{% set title = debian_bullseye_slim_dev.get("name") %}
 .. _debian_bullseye_slim_dev:
 
-**************************
+*********************************************************
+{{ debian_bullseye_slim_dev.hub_specifications[0]["Github"].split("/")[-1] }}
+*********************************************************
+
+{% set title = debian_bullseye_slim_dev.get("name") %}
+
 {{title}}
-**************************
+=========================================================
 
 {% block content %}
     {{ debian_bullseye_slim_dev.description }}
