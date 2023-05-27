@@ -11,6 +11,6 @@ covenient and reproducible way.
 .. toctree::
     :maxdepth: 2
     :titlesonly:
-       
+
+    pytorch201-cu117-mamba141   
     torchani223-cu117-ase-mamba141-jupyter
-    torchani_dev
