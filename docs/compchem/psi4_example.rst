@@ -51,7 +51,23 @@ paste it into your terminal and edit it to look like the following command line
 
     docker run --rm -v $(pwd):/home molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash -c "psi4 /home/test.inp /home/test.out"
 
-then press Enter. If nothing goes wrong, you should see the following lines in your terminal
+then press Enter. 
+
+.. note::
+
+    The same Docker image recipe can also be used with Apptainer (Singularity) to
+    obrain the same result via the following command
+
+    .. code-block:: bash
+
+        apptainer exec docker://molssiai/psi4v18-mamba141-py310:5.23.2023 psi4 test.inp test.out
+    
+    The aforementioned command should work because Apptainer binds ``/home/$USER``, ``/tmp``
+    and current working directory (``$PWD``) from the host system to the running container 
+    by default. For further details see the Apptainer 
+    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
+
+If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
