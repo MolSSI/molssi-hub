@@ -56,15 +56,14 @@ then press Enter.
 .. note::
 
     The same Docker image recipe can also be used with Apptainer (Singularity) to
-    obrain the same result via the following command
+    obtain the same result via the following command
 
     .. code-block:: bash
 
         apptainer exec docker://molssiai/psi4v18-mamba141-py310:5.23.2023 psi4 test.inp test.out
     
-    The aforementioned command should work because Apptainer binds ``/home/$USER``, ``/tmp``
-    and current working directory (``$PWD``) from the host system to the running container 
-    by default. For further details see the Apptainer 
+    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
+    from the host system to the running container by default. For further details see the Apptainer 
     `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
 
 If nothing goes wrong, you should see the following lines in your terminal
