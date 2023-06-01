@@ -12,6 +12,7 @@ construct and run containerized computational chemistry software.
     :titlesonly:
     
     mopac2206-mamba141
+    mopac_example
     psi4v18-mamba141-py310
     psi4_example
     pyscf221-base-mamba141-jupyter
