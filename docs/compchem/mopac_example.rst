@@ -6,9 +6,8 @@ MOPAC: Example
 
 Here, we demonstrate the non-interactive usage of the MOPAC image recipe.
 
-
-Running PSI4 Non-interactively
-==============================
+Running MOPAC Non-interactively
+===============================
 
 First, let's create a temporary folder, ``temp`` in your **home** directory
 and ``cd`` to it
