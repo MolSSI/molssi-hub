@@ -1,10 +1,10 @@
-.. _psi4_example:
+.. _mopac_example:
 
-*************
-PSI4: Example
-*************
+**************
+MOPAC: Example
+**************
 
-Here, we show you how to use the PSI4 image non-interactively.
+Here, we demonstrate the non-interactive usage of the MOPAC image recipe.
 
 
 Running PSI4 Non-interactively
@@ -17,39 +17,45 @@ and ``cd`` to it
 
     mkdir ~/temp && cd ~/temp
 
-Use your favorite text editor to create a new input file. Let's call it **test.inp**
+Use your favorite text editor to create a new input file. Let's call it **test.mop**
 and copy-paste the following code block into it and then, save it.
 
 .. code-block:: python
 
-    molecule benz{
-        pubchem:benzene
-    }
+    AM1 1SCF
+    Formic acid
+    Example of a single-point calculation
+    O
+    C    1.20 1
+    O    1.32 1  116.8 1    0.0 0   2  1
+    H    0.98 1  123.9 1    0.0 0   3  2  1
+    H    1.11 1  127.3 1  180.0 0   2  1  3
+    0    0.00 0    0.0 0    0.0 0   0  0  0
 
-    set {
-       basis     sto-3g
-       reference rhf
-    }
+This input file drives a single-point self-consistent field (SCF) 
+calculation on formic acid using AM1 semi-empirical model.
 
-    energy('scf')
+.. note::
 
-This input file fetches the benzene molecule from the `PubChem <https://pubchem.ncbi.nlm.nih.gov>`_ 
-database and performs a simple self-consistent field calculation at the RHF/STO-3G level of theory.
+    Using the keyword ``1SCF`` is the  
+    `recommended way <http://openmopac.net/manual/example_1SCF.html>`_ to perform a 
+    single-point SCF energy calculations in MOPAC.
+
 At this stage, the content of your directory should look like the following
 
 .. code-block:: bash
 
     temp
-    └── test.inp
+    └── test.mop
 
 It's time to copy the docker run command from the 
-`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/psi4v18-mamba141-py310.html>`_,
+`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/mopac2206-mamba141.html>`_,
 paste it into your terminal and edit it to look like the following command line
 
 
 .. code-block:: bash
 
-    docker run --rm -v $(pwd):/home molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash -c "psi4 /home/test.inp /home/test.out"
+    docker run --rm -v $(pwd):/home molssiai/mopac2206-mamba141:latest /bin/bash -c "mopac /home/test.mop /home/test.out"
 
 then press Enter. 
 
@@ -60,7 +66,7 @@ then press Enter.
 
     .. code-block:: bash
 
-        apptainer exec docker://molssiai/psi4v18-mamba141-py310:5.23.2023 psi4 test.inp test.out
+        apptainer exec docker://molssiai/mopac2206-mamba141:latest mopac test.mop test.out
     
     Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
     from the host system to the running container by default. For further details see the Apptainer 
@@ -70,16 +76,15 @@ If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
-    Searching PubChem database for benzene (single best match returned)
-    Found 1 result(s)
+    MOPAC Job: "/home/test.mop" ended normally on Jun  1, 2023, at 18:19.
 
 Your directory should now have the following structure
 
 .. code-block::
 
     temp/
-    ├── test.inp
-    ├── test.log
+    ├── test.mop
+    ├── test.arc
     └── test.out
 
 .. note::
@@ -88,10 +93,10 @@ Your directory should now have the following structure
 
     .. code-block:: bash
 
-        grep "beer" test.out
+        grep "JOB ENDED" test.out
     
     You should see the following output in your terminal
 
     .. code-block:: bash
 
-        *** Psi4 exiting successfully. Buy a developer a beer!
+        * JOB ENDED NORMALLY *
