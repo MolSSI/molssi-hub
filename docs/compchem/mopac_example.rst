@@ -38,7 +38,7 @@ calculation on formic acid using AM1 semi-empirical model.
 
     Using the keyword ``1SCF`` is the  
     `recommended way <http://openmopac.net/manual/example_1SCF.html>`_ to perform a 
-    single-point SCF energy calculations in MOPAC.
+    single-point SCF energy calculation in MOPAC.
 
 At this stage, the content of your directory should look like the following
 
