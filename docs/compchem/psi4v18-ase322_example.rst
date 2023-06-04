@@ -87,8 +87,8 @@ If nothing goes wrong, you should see the following lines in your terminal
      [-1.09633122e-14  2.87785885e-01  1.78901243e-01]]
     Warning: used thermodynamics relations inappropriate for low-frequency modes: ['586.9508' '596.8722' '615.0969']
 
-The first and second line in the output notify us about the program's resource usage.
-The third line is the total energy of our system in electron-Volts (eV).
+The first and second lines in the output notify us about the program's resource usage.
+The third line is the total energy of our system in electron-Volt (eV).
 The next three lines within brackets are the elements of our force matrix.
 The harmonic vibrational frequencies are shown in the final output line.
 
