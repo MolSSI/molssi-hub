@@ -7,6 +7,6 @@ ENV PATH /opt/conda/bin:$PATH
 
 COPY --from=condaforge/mambaforge /opt/conda /opt/conda
 
-RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> /root/.bashrc \
- && echo "conda activate base" >> /root/.bashrc \
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
+ && echo "conda activate base" >> ~/.bashrc \
  && conda clean -ay
