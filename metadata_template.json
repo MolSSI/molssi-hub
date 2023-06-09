@@ -4,7 +4,7 @@
     "source_specifications": [
         {
             "Developers": "",
-            "Github": "",
+            "Source": "",
             "Documentation": ""
         }
     ],
@@ -12,8 +12,8 @@
         {
             "Repository": "",
             "Tags": "",
-            "Github":"",
-            "Dockerfile":""
+            "Source":"",
+            "Recipe":""
         }
     ],
     "docker_pull_command": "",
@@ -22,7 +22,8 @@
     "image_specifications":[
         {
             "OS/Arch": "",
-            "User(s)": "",
+            "Users (UID)": "",
+            "Groups (GID)": "",
             "Environment variables":  [
                 {
                     "PATH":""
