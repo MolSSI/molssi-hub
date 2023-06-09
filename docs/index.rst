@@ -1,23 +1,21 @@
-***********************
-MolSSI-AI Container Hub 
-***********************
+********************
+MolSSI Container Hub
+********************
 
-.. figure:: _static/molssi_ai.svg
+.. figure:: _static/molssi_main_logo.png
   :align: center
-  :scale: 15%
-  :alt: MolSSI-AI Container Hub logo
+  :scale: 25%
+  :alt: MolSSI Container Hub logo
 
-Welcome to **MolSSI-AI Container Hub's** documentation.
+Welcome to **MolSSI Container Hub's** documentation.
 
-**MolSSI-AI Container Hub** hosts a collection of curated, free and open-source
+**MolSSI Container Hub** hosts a collection of curated, free and open-source
 Dockerfile and Apptainer (Singularity) image recipes to containarize major open-source 
 scientific software and industrial training resources in artificial intelligence,
 data science, machine learning and computational molecular science. Our mission is to
 to minimize the burden of dealing with the complexities of setting up the scientific
 software and managing their dependencies and to boost research productivity and 
 reproducibility across all domains of computational molecular sciences.
-
-This package is a part of core infrastructure in the Chem-AI software ecosystem.
 
 .. Table of Contents
 .. toctree::
@@ -42,7 +40,7 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    .. grid-item-card:: Quick Start
       :margin: 0 3 0 0
 
-      Jump right into using MolSSI-AI Container Hub!
+      Jump right into using MolSSI Container Hub!
 
       .. button-link:: ./quick_start.html
         :color: primary
@@ -50,16 +48,16 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
 
         Quick Start Guide
 
-   .. grid-item-card:: MolSSI-AI Container Hub
+   .. grid-item-card:: MolSSI Container Hub
       :margin: 0 3 0 0
 
-      MolSSI-AI image registry for molecular science
+      MolSSI image registry for molecular science
 
-      .. button-link:: https://hub.docker.com/u/molssiai
+      .. button-link:: https://hub.docker.com/u/molssi
         :color: primary
         :expand:
 
-        MolSSI-AI Recipes
+        MolSSI Recipes
 
    .. grid-item-card:: Machine Learning
       :margin: 0 3 0 0
@@ -89,24 +87,24 @@ This package is a part of core infrastructure in the Chem-AI software ecosystem.
    :align: center
 
    * - GitHub
-     - MolSSI-AI Hub
+     - MolSSI Hub
      - Zenodo Community
      - MolSSI Guidelines
    * - |GitHub|
-     - |MolSSI-AI Hub|
+     - |MolSSI Hub|
      - |Zenodo|
      - |MolSSI|
 
 
 .. Badge(s)
 .. |GitHub| image:: https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
-   :target: https://github.com/molssi-ai/molssi-ai-hub
-   :alt: zenopy GitHub Repository
+   :target: https://github.com/molssi/molssi-hub
+   :alt: molssi-hub GitHub Repository
    :width: 90
 
-.. |MolSSI-AI Hub| image:: images/docker.svg
-   :target: https://hub.docker.com/u/molssiai
-   :alt: MolSSI-AI Container Hub
+.. |MolSSI Hub| image:: images/docker.svg
+   :target: https://hub.docker.com/u/molssi
+   :alt: MolSSI Container Hub
    :width: 110
 
 .. |Zenodo| image:: https://about.zenodo.org/static/img/logos/zenodo-gradient-square.svg
