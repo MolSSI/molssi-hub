@@ -154,7 +154,7 @@ html_theme_options = {
 }
 
 # Path to project's logo
-html_logo = "_static/molssi_ai.svg"
+html_logo = "_static/molssi_main_logo.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
