@@ -32,7 +32,7 @@ on.
    
    .. code-block:: bash
    
-      FROM ``molssi/debian-bullseye-slim-dev``
+      FROM molssi/debian-bullseye-slim-dev
 
    you should spacify the name of the base image you use, say, ``ubuntu180``.
    
