@@ -17,15 +17,15 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-from molssiai_hub._version import get_versions
+from molssi_hub._version import get_versions
 revision = get_versions()['version']
 del get_versions
 
-# Get all json files from ../molssiai_hub and store them
+# Get all json files from ../molssi_hub and store them
 # in html_context variable for further processing in jinja 
 # templates in _template folder
 from docs import json2jinja
-html_context = json2jinja.html_context_generator(json_file_path="../molssiai_hub")
+html_context = json2jinja.html_context_generator(json_file_path="../molssi_hub")
 
 def rst2jinja(app, docname, source):
     """
@@ -44,7 +44,7 @@ def setup(app):
     app.connect("source-read", rst2jinja)
 
 # -- Project information -----------------------------------------------------
-project = "molssiai_hub"
+project = "molssi_hub"
 author = "Mohammad Mostafanejad"
 
 # The full version, including alpha/beta/rc tags.
@@ -188,7 +188,7 @@ html_show_copyright = False
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'molssiai_hubdoc'
+htmlhelp_basename = 'molssi_hubdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -215,8 +215,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'molssiai_hub.tex', 'molssiai_hub',
-     'molssiai_hub', 'manual'),
+    (master_doc, 'molssi_hub.tex', 'molssi_hub',
+     'molssi_hub', 'manual'),
 ]
 
 
@@ -225,7 +225,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'molssiai_hub', 'molssiai_hub',
+    (master_doc, 'molssi_hub', 'molssi_hub',
      [author], 1)
 ]
 
@@ -236,7 +236,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'molssiai_hub', 'molssiai_hub Documentation',
+    (master_doc, 'molssi_hub', 'molssi_hub Documentation',
      author, 'Mohammad Mostafanejad', 'Container Hub for Computational Molecular Science',
      'Miscellaneous'),
 ]
