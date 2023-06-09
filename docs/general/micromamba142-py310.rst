@@ -1,7 +1,7 @@
 .. _micromamba142_py310:
 
 *********************************************************
-{{ micromamba142_py310.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ micromamba142_py310.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
 {% set title = micromamba142_py310.get("name") %}
@@ -24,8 +24,8 @@ Source Specifications
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
     {% for dc in micromamba142_py310.hub_specifications %}

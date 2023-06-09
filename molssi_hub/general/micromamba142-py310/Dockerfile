@@ -1,7 +1,7 @@
-FROM molssiai/debian-bullseye-slim-dev:5.2.2023
+FROM molssi/debian-bullseye-slim-dev:latest
 
 LABEL maintainer="Mohammad Mostafanejad, \
-                  MolSSI-AI, Molecular Sciences Software Institute"
+                  Molecular Sciences Software Institute"
 
 ENV PATH /opt/micromamba/bin:$PATH
 ENV MAMBA_EXE /bin/micromamba

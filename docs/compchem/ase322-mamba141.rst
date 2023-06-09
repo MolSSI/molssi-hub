@@ -1,34 +1,34 @@
-.. _torchani223_cu117_ase_mamba141_jupyter:
+.. _ase322_mamba141:
 
 *********************************************************
-{{ torchani223_cu117_ase_mamba141_jupyter.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ ase322_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
-{% set title = torchani223_cu117_ase_mamba141_jupyter.get("name") %}
+{% set title = ase322_mamba141.get("name") %}
 
 {{title}}
 =========================================================
 
 {% block content %}
-    {{ torchani223_cu117_ase_mamba141_jupyter.description }}
+    {{ ase322_mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in torchani223_cu117_ase_mamba141_jupyter.source_specifications %}
+    {% for dc in ase322_mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
-    {% for dc in torchani223_cu117_ase_mamba141_jupyter.hub_specifications %}
+    {% for dc in ase322_mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -39,19 +39,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ torchani223_cu117_ase_mamba141_jupyter.docker_pull_command }}
+        {{ ase322_mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ torchani223_cu117_ase_mamba141_jupyter.docker_run_command }}
+        {{ ase322_mamba141.docker_run_command }}
 
 {% block note %}
-{% if torchani223_cu117_ase_mamba141_jupyter.note != "" %}
+{% if ase322_mamba141.note != "" %}
 .. note::
 
-        {{ torchani223_cu117_ase_mamba141_jupyter.note }}
+        {{ ase322_mamba141.note }}
 {% endif %}
 {% endblock note %}
 
@@ -59,7 +59,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in torchani223_cu117_ase_mamba141_jupyter.image_specifications %}
+    {% for dc in ase322_mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

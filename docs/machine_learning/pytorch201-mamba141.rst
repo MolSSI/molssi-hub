@@ -1,34 +1,34 @@
-.. _psi4v18_mamba141_py310:
+.. _pytorch201_mamba141:
 
 *********************************************************
-{{ psi4v18_mamba141_py310.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ pytorch201_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
-{% set title = psi4v18_mamba141_py310.get("name") %}
+{% set title = pytorch201_mamba141.get("name") %}
 
 {{title}}
 =========================================================
 
 {% block content %}
-    {{ psi4v18_mamba141_py310.description }}
+    {{ pytorch201_mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in psi4v18_mamba141_py310.source_specifications %}
+    {% for dc in pytorch201_mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
-    {% for dc in psi4v18_mamba141_py310.hub_specifications %}
+    {% for dc in pytorch201_mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -39,19 +39,19 @@ MolSSI-AI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ psi4v18_mamba141_py310.docker_pull_command }}
+        {{ pytorch201_mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ psi4v18_mamba141_py310.docker_run_command }}
+        {{ pytorch201_mamba141.docker_run_command }}
 
 {% block note %}
-{% if psi4v18_mamba141_py310.note != "" %}
+{% if pytorch201_mamba141.note != "" %}
 .. note::
 
-        {{ psi4v18_mamba141_py310.note }}
+        {{ pytorch201_mamba141.note }}
 {% endif %}
 {% endblock note %}
 
@@ -59,7 +59,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in psi4v18_mamba141_py310.image_specifications %}
+    {% for dc in pytorch201_mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

@@ -1,7 +1,7 @@
-FROM molssiai/mamba141:5.2.2023
+FROM molssiai/mamba141:latest
 
 LABEL maintainer="Mohammad Mostafanejad, \
-                  MolSSI-AI, Molecular Sciences Software Institute"
+                  Molecular Sciences Software Institute"
 
 RUN mamba install numpy \
     scipy \

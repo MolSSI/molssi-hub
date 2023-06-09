@@ -1,7 +1,0 @@
-Bootstrap: docker
-From: molssiai/debian-bullseye-slim-dev:5.2.2023
-
-%labels
-    Author Mohammad Mostafanejad
-    Organization MolSSI-AI, Molecular Sciences Software Institute
-    Version 5.17.2023
