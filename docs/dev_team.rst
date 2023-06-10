@@ -4,7 +4,7 @@
 Developers
 **********
 
-The MolSSI-AI Container Hub is a free and open-source repository that is 
+The **MolSSI Container Hub** is a free and open-source repository that is 
 built for boosting productivity and promoting reproducibility in scientific 
 research and discovery across all domains of STEM community, in particular,
 computational molecular scienc (CMS). We welcome any feedback and 

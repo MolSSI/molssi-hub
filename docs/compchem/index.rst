@@ -11,13 +11,13 @@ construct and run containerized computational chemistry software.
     :maxdepth: 2
     :titlesonly:
     
-    ase322-mamba141-py310
+    ase322-mamba141
     ase322_example
     mopac2206-mamba141
     mopac_example
-    psi4v18-ase322-mamba141-py310
+    psi4v18-ase322-mamba141
     psi4v18-ase322_example
-    psi4v18-mamba141-py310
+    psi4v18-mamba141
     psi4_example
     pyscf221-base-mamba141-jupyter
     pyscf_example

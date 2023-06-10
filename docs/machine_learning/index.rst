@@ -12,5 +12,5 @@ covenient and reproducible way.
     :maxdepth: 2
     :titlesonly:
 
-    pytorch201-cu117-mamba141   
-    torchani223-cu117-ase-mamba141-jupyter
+    pytorch201-mamba141   
+    torchani223-mamba141-ase322-jupyter

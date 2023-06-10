@@ -1,0 +1,44 @@
+{
+    "name": "Micromamba",
+    "description": "Micromamba is a very compact variant of the mamba package manager. As a statically linked C++ executable with an independent command line interface, micromamba does not need a base environment to operate and is not distributed with a default version of Python.",
+    "source_specifications": [
+        {
+            "Developers": "`QuantStack & mamba contributors <https://quantstack.net/index.html>`_",
+            "Source": "https://github.com/mamba-org/mamba#micromamba",
+            "Documentation": "https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/micromamba142-py310",
+            "Tags": "https://hub.docker.com/r/molssi/micromamba142-py310/tags",
+            "Source": "https://github.com/molssi/molssi-hub/tree/main/molssi_hub/general/micromamba142-py310",
+            "Recipe": "https://github.com/molssi/molssi-hub/blob/main/molssi_hub/general/micromamba142-py310/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/micromamba142-py310:5.2.2023",
+    "docker_run_command": "docker run -it --name micromamba -v $(pwd):/home/molssi molssi/micromamba142-py310:5.2.2023 /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "Users (UID)": "molssi (1000)",
+            "Groups (GID)": "molssi (1000)",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/micromamba/bin",
+                    "MAMBA_EXE": "/bin/micromamba",
+                    "MAMBA_ROOT_PREFIX": "/opt/micromamba"
+                }
+            ],
+            "Volumes": "$(pwd):$HOME",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "Python 3.10"
+                }
+            ]
+        }
+    ]
+}

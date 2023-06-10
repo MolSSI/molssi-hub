@@ -1,0 +1,43 @@
+{
+    "name": "PyTorch",
+    "description": "PyTorch is an optimized tensor library for deep learning using GPUs and CPUs.",
+    "source_specifications": [
+        {
+            "Developers": "`PyTorch Maintainers <https://pytorch.org/docs/master/community/persons_of_interest.html>`_",
+            "Source": "https://github.com/pytorch/pytorch",
+            "Documentation": "https://pytorch.org/docs/stable/index.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/pytorch201-cu117-mamba141",
+            "Tags": "https://hub.docker.com/r/molssi/pytorch201-cu117-mamba141/tags",
+            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/machine_learning/pytorch201-cu117-mamba141",
+            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/machine_learning/pytorch201-cu117-mamba141/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/pytorch201-cu117-mamba141:latest",
+    "docker_run_command": "docker run -it --name pytorch -v $(pwd):/home molssi/pytorch201-cu117-mamba141:latest /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option. For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "Users (UID)": "molssi (1000)",
+            "Groups (GID)": "molssi (1000)",
+
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "$(pwd):$HOME",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "pytorch-cuda 11.7, torchaudio, torchvision"
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 .. _mopac2206_mamba141:
 
 *********************************************************
-{{ mopac2206_mamba141.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ mopac2206_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
 {% set title = mopac2206_mamba141.get("name") %}
@@ -24,8 +24,8 @@ Source Specifications
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
     {% for dc in mopac2206_mamba141.hub_specifications %}

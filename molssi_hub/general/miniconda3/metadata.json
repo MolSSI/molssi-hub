@@ -1,0 +1,42 @@
+{
+    "name": "Miniconda 3",
+    "description": "Miniconda is a free minimal installer for conda and a slim bootstrap variant of Anaconda that incorporates conda, Python and their dependencies alongside a few other useful packages including pip and zlib.",
+    "source_specifications": [
+        {
+            "Developers": "`Anaconda, Inc <https://www.anaconda.com>`_",
+            "Source": "https://github.com/ContinuumIO/docker-images/tree/master/miniconda3",
+            "Documentation": "https://docs.conda.io/en/latest/miniconda.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/miniconda3",
+            "Tags": "https://hub.docker.com/r/molssi/miniconda3/tags",
+            "Source": "https://github.com/molssi/molssi-hub/tree/main/molssi_hub/general/miniconda3",
+            "Dockerfile": "https://github.com/molssi/molssi-hub/blob/main/molssi_hub/general/miniconda3/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/miniconda3:5.2.2023",
+    "docker_run_command": "docker run -it --name miniconda3 -v $(pwd):/home/molssi molssi/miniconda3:5.2.2023 /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "Users (UID)": "molssi (1000)",
+            "Groups (GID)": "molssi (1000)",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "$(pwd):$HOME",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "None"
+                }
+            ]
+        }
+    ]
+}

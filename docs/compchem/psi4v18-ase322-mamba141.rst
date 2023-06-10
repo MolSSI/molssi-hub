@@ -1,23 +1,23 @@
-.. _micromamba142_py310:
+.. _psi4v18_ase322_mamba141:
 
 *********************************************************
-{{ micromamba142_py310.hub_specifications[0]["Source"].split("/")[-1] }}
+{{ psi4v18_ase322_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
-{% set title = micromamba142_py310.get("name") %}
+{% set title = psi4v18_ase322_mamba141.get("name") %}
 
 {{title}}
 =========================================================
 
 {% block content %}
-    {{ micromamba142_py310.description }}
+    {{ psi4v18_ase322_mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in micromamba142_py310.source_specifications %}
+    {% for dc in psi4v18_ase322_mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -28,7 +28,7 @@ MolSSI Container Hub Specifications
 ===================================
 
 {% block hub_specifications %}
-    {% for dc in micromamba142_py310.hub_specifications %}
+    {% for dc in psi4v18_ase322_mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -39,19 +39,19 @@ MolSSI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ micromamba142_py310.docker_pull_command }}
+        {{ psi4v18_ase322_mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ micromamba142_py310.docker_run_command }}
+        {{ psi4v18_ase322_mamba141.docker_run_command }}
 
 {% block note %}
-{% if micromamba142_py310.note != "" %}
+{% if psi4v18_ase322_mamba141.note != "" %}
 .. note::
 
-        {{ micromamba142_py310.note }}
+        {{ psi4v18_ase322_mamba141.note }}
 {% endif %}
 {% endblock note %}
 
@@ -59,7 +59,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in micromamba142_py310.image_specifications %}
+    {% for dc in psi4v18_ase322_mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}

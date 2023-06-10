@@ -116,10 +116,10 @@ cat > "${docroot}/dev/index.html" <<EOF
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Documentation for MolSSI-AI Container Hub</title>
+      <title>Documentation for MolSSI Container Hub</title>
    </head>
    <body>
-      <h1>Documentation for MolSSI-AI Container Hub</h1>
+      <h1>Documentation for MolSSI Container Hub</h1>
       <h2>Branches</h2>
       <ul>
 EOF
@@ -128,7 +128,7 @@ cat > "${docroot}/dev/versions.html" <<EOF
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Documentation for MolSSI-AI Container Hub</title>
+      <title>Documentation for MolSSI Container Hub</title>
    </head>
    <body>
       <ul>

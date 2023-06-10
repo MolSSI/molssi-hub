@@ -1,7 +1,7 @@
 .. _debian_bullseye_slim_dev:
 
 *********************************************************
-{{ debian_bullseye_slim_dev.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ debian_bullseye_slim_dev.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
 {% set title = debian_bullseye_slim_dev.get("name") %}
@@ -24,8 +24,8 @@ Source Specifications
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
     {% for dc in debian_bullseye_slim_dev.hub_specifications %}

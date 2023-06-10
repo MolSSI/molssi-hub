@@ -1,7 +1,7 @@
 .. _pyscf221_base_mamba141_jupyter:
 
 *********************************************************
-{{ pyscf221_base_mamba141_jupyter.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ pyscf221_base_mamba141_jupyter.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
 {% set title = pyscf221_base_mamba141_jupyter.get("name") %}
@@ -24,8 +24,8 @@ Source Specifications
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
     {% for dc in pyscf221_base_mamba141_jupyter.hub_specifications %}

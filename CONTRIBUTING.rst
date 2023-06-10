@@ -6,12 +6,12 @@ Contribute
 
 In order to submit your recipes for containerized sofware,
 please follow the instructions 
-[here](https://molssi-ai.github.io/molssi-ai-hub/contribute.html)
+[here](https://molssi.github.io/molssi-hub/contribute.html)
 
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/molssi-ai/molssi-ai-hub/issues.
+Report bugs at https://github.com/molssi/molssi-hub/issues.
 
 If you are reporting a bug, please include:
 

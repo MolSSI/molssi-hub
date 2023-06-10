@@ -1,7 +1,7 @@
 .. _miniconda3:
 
 *********************************************************
-{{ miniconda3.hub_specifications[0]["Github"].split("/")[-1] }}
+{{ miniconda3.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
 {% set title = miniconda3.get("name") %}
@@ -24,8 +24,8 @@ Source Specifications
     {% endfor %}
 {% endblock specifications %}
 
-MolSSI-AI Container Hub Specifications
-======================================
+MolSSI Container Hub Specifications
+===================================
 
 {% block hub_specifications %}
     {% for dc in miniconda3.hub_specifications %}
