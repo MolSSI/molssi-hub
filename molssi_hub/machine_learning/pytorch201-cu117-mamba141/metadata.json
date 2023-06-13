@@ -30,7 +30,7 @@
                     "CONDA_ROOT_PREFIX": "/home/molssi/conda"
                 }
             ],
-            "Volumes": "$(pwd):$HOME",
+            "Volumes": "$(pwd):/home/molssi",
             "Network": "None",
             "Extras": [
                 {
