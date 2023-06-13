@@ -1,4 +1,4 @@
-# MOLSSI Container Hub
+# MOLSSI CONTAINER HUB
 
 The MolSSI Container Hub for computational molecular science
 
@@ -9,7 +9,7 @@ Dockerfile and Apptainer (Singularity) image recipes to containarize major open-
 scientific software and industrial training resources in artificial intelligence,
 data science, machine learning and computational molecular science. Our mission is to
 to minimize the burden of dealing with the complexities of setting up the scientific
-software and managing their dependencies and to boost research productivity and
+software and managing their dependencies which should improve research productivity and
 reproducibility across all domains of computational molecular sciences.
 
 ## HOW TO CONTRIBUTE
