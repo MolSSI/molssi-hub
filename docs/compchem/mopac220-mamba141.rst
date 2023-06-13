@@ -1,23 +1,23 @@
-.. _mopac2206_mamba141:
+.. _mopac220_mamba141:
 
 *********************************************************
-{{ mopac2206_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
+{{ mopac220_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
-{% set title = mopac2206_mamba141.get("name") %}
+{% set title = mopac220_mamba141.get("name") %}
 
 {{title}}
 =========================================================
 
 {% block content %}
-    {{ mopac2206_mamba141.description }}
+    {{ mopac220_mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in mopac2206_mamba141.source_specifications %}
+    {% for dc in mopac220_mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -28,7 +28,7 @@ MolSSI Container Hub Specifications
 ===================================
 
 {% block hub_specifications %}
-    {% for dc in mopac2206_mamba141.hub_specifications %}
+    {% for dc in mopac220_mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -39,19 +39,19 @@ MolSSI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ mopac2206_mamba141.docker_pull_command }}
+        {{ mopac220_mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ mopac2206_mamba141.docker_run_command }}
+        {{ mopac220_mamba141.docker_run_command }}
 
 {% block note %}
-{% if mopac2206_mamba141.note != "" %}
+{% if mopac220_mamba141.note != "" %}
 .. note::
 
-        {{ mopac2206_mamba141.note }}
+        {{ mopac220_mamba141.note }}
 {% endif %}
 {% endblock note %}
 
@@ -59,7 +59,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in mopac2206_mamba141.image_specifications %}
+    {% for dc in mopac220_mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
