@@ -27,7 +27,7 @@
 
             "Environment variables":  [
                 {
-                    "PATH":"/opt/conda/bin"
+                    "CONDA_ROOT_PREFIX": "/home/molssi/conda"
                 }
             ],
             "Volumes": "$(pwd):$HOME",
@@ -35,7 +35,7 @@
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "pytorch-cuda 11.7, torchaudio, torchvision"
+                    "Important packages installed": "pytorch-cuda 11.7, torchaudio 2.0.2, torchvision 0.15.2"
                 }
             ]
         }
