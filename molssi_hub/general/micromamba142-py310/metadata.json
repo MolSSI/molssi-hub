@@ -26,9 +26,8 @@
             "Groups (GID)": "molssi (1000)",
             "Environment variables":  [
                 {
-                    "PATH":"/opt/micromamba/bin",
                     "MAMBA_EXE": "/bin/micromamba",
-                    "MAMBA_ROOT_PREFIX": "/opt/micromamba"
+                    "MAMBA_ROOT_PREFIX": "/home/molssi/micromamba"
                 }
             ],
             "Volumes": "$(pwd):/home/molssi",
