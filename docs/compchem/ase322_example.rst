@@ -76,10 +76,9 @@ then press Enter.
 
 .. caution::
 
-    Ignore (usually many) wanings that you might get, regarding Apptainer's 
-    `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ feature, before seeing the 
-    desired output shown below. This feature allows an unprivileged Apptainer user to run containers
-    as root by default.
+    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
+    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
+    feature which allows an unprivileged user to run containers as root by default.
 
 If nothing goes wrong, you should see the following lines in your terminal
 
