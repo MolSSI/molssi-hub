@@ -1,12 +1,16 @@
-FROM molssiai/mamba141:5.2.2023
+FROM molssi/mamba141:latest
 
 LABEL maintainer="Mohammad Mostafanejad, \
-                  MolSSI-AI, Molecular Sciences Software Institute"
+                  Molecular Sciences Software Institute"
 
-RUN mamba install python=3.10 \
-    numpy \
+ENV CONDA_ROOT_PREFIX /home/molssi/conda
+
+RUN mamba install numpy \
     scipy \
     matplotlib \
-    ase==3.22.1 \
+    ase=3.22.1 \
     -c conda-forge \
- && conda clean -ay
+ && conda clean -afy \
+ && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.a' -delete \
+ && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.pyc' -delete \
+ && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.js.map' -delete
