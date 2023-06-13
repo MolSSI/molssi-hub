@@ -13,7 +13,7 @@ construct and run containerized computational chemistry software.
     
     ase322-mamba141
     ase322_example
-    mopac2206-mamba141
+    mopac220-mamba141
     mopac_example
     psi4v18-ase322-mamba141
     psi4v18-ase322_example

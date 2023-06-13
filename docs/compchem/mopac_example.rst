@@ -48,13 +48,13 @@ At this stage, the content of your directory should look like the following
     └── test.mop
 
 It's time to copy the docker run command from the 
-`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/mopac2206-mamba141.html>`_,
+`catalog <https://molssi.github.io/molssi-hub/compchem/mopac220-mamba141.html>`_,
 paste it into your terminal and edit it to look like the following command line
 
 
 .. code-block:: bash
 
-    docker run --rm -v $(pwd):/home molssiai/mopac2206-mamba141:latest /bin/bash -c "mopac /home/test.mop /home/test.out"
+    docker run --rm -w /home/molssi/temp -v $(pwd):/home/molssi/temp molssi/mopac220-mamba141:latest /bin/bash -c "mopac test.mop test.out"
 
 then press Enter. 
 
@@ -65,11 +65,17 @@ then press Enter.
 
     .. code-block:: bash
 
-        apptainer exec docker://molssiai/mopac2206-mamba141:latest mopac test.mop test.out
+        apptainer exec docker://molssi/mopac220-mamba141:latest mopac test.mop test.out
     
     Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
     from the host system to the running container by default. For further details see the Apptainer 
     `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
+
+.. caution::
+
+    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
+    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
+    feature which allows an unprivileged user to run containers as root by default.
 
 If nothing goes wrong, you should see the following lines in your terminal
 

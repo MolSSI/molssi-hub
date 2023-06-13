@@ -4,7 +4,7 @@ LABEL maintainer="Mohammad Mostafanejad, \
                   Molecular Sciences Software Institute"
 
 ENV USERNAME molssi
-ENV MAMBA_ROOT_PREFIX home/${USERNAME}/conda
+ENV MAMBA_ROOT_PREFIX /home/${USERNAME}/conda
 ENV PATH ${MAMBA_ROOT_PREFIX}/bin:$PATH
 
 RUN wget https://github.com/conda-forge/miniforge/releases/download/23.1.0-1/Mambaforge-23.1.0-1-Linux-$(uname -m).sh \

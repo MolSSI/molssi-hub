@@ -1,23 +1,23 @@
 {
-    "name": "ASE",
-    "description": "The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations.",
+    "name": "MOPAC",
+    "description": "MOPAC (Molecular Orbital PACkage) is a semiempirical quantum chemistry program based on Dewar and Thiel's NDDO approximation.",
     "source_specifications": [
         {
-            "Developers": "`ASE Developers <https://gitlab.com/ase/ase/-/project_members>`_",
-            "Source": "https://gitlab.com/ase/ase",
-            "Documentation": "https://wiki.fysik.dtu.dk/ase/index.html"
+            "Developers": "`MOPAC Contributors <https://github.com/openmopac/mopac/graphs/contributors>`_",
+            "Source": "https://github.com/openmopac/mopac",
+            "Documentation": "http://openmopac.net/manual/index.html"
         }
     ],
     "hub_specifications": [
         {
-            "Repository": "https://hub.docker.com/r/molssi/ase322-mamba141",
-            "Tags": "https://hub.docker.com/r/molssi/ase322-mamba141/tags",
-            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/ase322-mamba141",
-            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/compchem/ase322-mamba141/Dockerfile"
+            "Repository": "https://hub.docker.com/repository/docker/molssi/mopac220-mamba141/general",
+            "Tags": "https://hub.docker.com/repository/docker/molssi/mopac220-mamba141/tags",
+            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/mopac220-mamba141",
+            "Recipe":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/mopac220-mamba141/Dockerfile"
         }
     ],
-    "docker_pull_command": "docker pull molssi/ase322-mamba141:latest",
-    "docker_run_command": "docker run -it --name ase -v $(pwd):/home/molssi molssi/ase322-mamba141:latest /bin/bash",
+    "docker_pull_command": "docker pull molssi/mopac220-mamba141:latest",
+    "docker_run_command": "docker run -it --name mopac -v $(pwd):/home/molssi molssi/mopac220-mamba141:latest /bin/bash",
     "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
     "image_specifications":[
         {
@@ -36,7 +36,7 @@
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "mamba 1.4.1, SciPy, NumPy, matplotlib"
+                    "Important packages installed": "mamba 1.4.1"
                 }
             ]
         }
