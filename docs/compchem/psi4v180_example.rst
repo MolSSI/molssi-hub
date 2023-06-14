@@ -43,13 +43,13 @@ At this stage, the content of your directory should look like the following
     └── test.inp
 
 It's time to copy the docker run command from the 
-`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/psi4v18-mamba141-py310.html>`_,
+`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/psi4v180-mamba141.html>`_,
 paste it into your terminal and edit it to look like the following command line
 
 
 .. code-block:: bash
 
-    docker run --rm -v $(pwd):/home molssiai/psi4v18-mamba141-py310:5.23.2023 /bin/bash -c "psi4 /home/test.inp /home/test.out"
+    docker run -w /home/molssi/temp -v $(pwd):/home/molssi/temp --rm molssi/psi4v180-mamba141:latest /bin/bash -c "psi4 test.inp"
 
 then press Enter. 
 
@@ -60,11 +60,17 @@ then press Enter.
 
     .. code-block:: bash
 
-        apptainer exec docker://molssiai/psi4v18-mamba141-py310:5.23.2023 psi4 test.inp test.out
+        apptainer exec docker://molssi/psi4v180-mamba141:latest psi4 test.inp
     
     Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
     from the host system to the running container by default. For further details see the Apptainer 
     `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
+
+.. caution::
+
+    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
+    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
+    feature which allows an unprivileged user to run containers as root by default.
 
 If nothing goes wrong, you should see the following lines in your terminal
 
@@ -80,7 +86,9 @@ Your directory should now have the following structure
     temp/
     ├── test.inp
     ├── test.log
-    └── test.out
+    ├── test.out
+    └── timer.dat
+
 
 .. note::
 
