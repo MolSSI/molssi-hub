@@ -1,4 +1,4 @@
-FROM molssi/psi4v18-mamba141:latest
+FROM molssi/psi4v180-mamba141:latest
  
 LABEL maintainer="Mohammad Mostafanejad, \
                   Molecular Sciences Software Institute"
