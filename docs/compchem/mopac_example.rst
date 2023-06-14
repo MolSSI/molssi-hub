@@ -81,7 +81,7 @@ If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
-    MOPAC Job: "/home/test.mop" ended normally on Jun  1, 2023, at 18:19.
+    MOPAC Job: "test.mop" ended normally on Jun  1, 2023, at 18:19.
 
 Your directory should now have the following structure
 
