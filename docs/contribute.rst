@@ -38,7 +38,7 @@ on.
    
 ``baseEnv`` refers to any type of environment that your containerized software
 lives in. For example, you may want to install your conteinerized software stack 
-within the base conda environment that can be created by ``mamba141``, ``miniconda300`` etc.
+within the base conda environment that can be created by ``mamba141``, ``miniconda3`` etc.
  
 The ``externalPackages`` denotes the existence of external packages that the core software
 might not depend on but they can impact its performance or usage. For example, ASE or PSI4
@@ -49,6 +49,7 @@ minor and patch) according to semantic versioning.
 .. note::
    
    Do not include any numerical information from calendar or other customized versioning styles.
+   Use ``v`` as delimiter if the name of the ``coreSoftware`` ends with a number (e.g., psi4v180).
 
 
 Submit Your Recipes
@@ -70,17 +71,17 @@ such as PySCF and PSI4, your folder structure should have the following from
 
    molssi_hub/
    ├── compchem/
-   │   ├── psi4v18-mamba141-py310/
+   │   ├── psi4v180-mamba141/
    │   │   ├── Dockerfile
    │   │   └── metadata.json
    │   ├── ...
    │   │   ├── Dockerfile
    │   │   └── metadata.json
 
-That is, **psi4v18-mamba141-py310** is a subfolder of **compchem** category 
+That is, **psi4v180-mamba141** is a subfolder of **compchem** category 
 and will have its own **Dockerfile** and **metadata.json** files. If everything is
-sorted properly, our CI workflow will pickup the information stored in the metadata
-JSON files and process them into templated 
+sorted properly, our continuous integration workflow will pickup the information 
+stored in the metadata JSON files and process them into templated 
 `catalog pages <https://molssi.github.io/molssi-hub>`_.
 
 We will review your PR and respond to your request as soon as possible.
