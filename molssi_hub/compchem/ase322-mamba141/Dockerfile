@@ -9,6 +9,6 @@ RUN mamba install numpy \
     ase=3.22.1 \
     -c conda-forge -yq \
  && conda clean -afy \
- && find ${MAMBA_ROOT_PREFIX} -follow -type f -name '*.a' -delete \
- && find ${MAMBA_ROOT_PREFIX} -follow -type f -name '*.pyc' -delete \
- && find ${MAMBA_ROOT_PREFIX} -follow -type f -name '*.js.map' -delete
+ && find ${CONDA_PREFIX} -follow -type f -name '*.a' -delete \
+ && find ${CONDA_PREFIX} -follow -type f -name '*.pyc' -delete \
+ && find ${CONDA_PREFIX} -follow -type f -name '*.js.map' -delete
