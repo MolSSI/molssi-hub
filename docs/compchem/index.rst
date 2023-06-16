@@ -15,7 +15,7 @@ construct and run containerized computational chemistry software.
     ase_example
     mopac220-mamba141
     mopac_example
-    psi4v180-ase322-mamba141
+    psi4v180-mamba141-ase322
     psi4-ase_example
     psi4v180-mamba141
     psi4_example
