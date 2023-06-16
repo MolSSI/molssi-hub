@@ -26,7 +26,7 @@
             "Groups (GID)": "molssi (1000)",
             "Environment variables":  [
                 {
-                    "CONDA_PREFIX": "home/molssi/conda",
+                    "CONDA_PREFIX": "/home/molssi/conda",
                     "PATH": "${CONDA_PREFIX}/bin:$PATH"
                 }
             ],

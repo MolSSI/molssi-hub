@@ -26,9 +26,8 @@
             "Groups (GID)": "molssi (1000)",
             "Environment variables": [
                 {
-                    "USERNAME": "molssi",
-                    "MAMBA_ROOT_PREFIX": "home/${USERNAME}/conda",
-                    "PATH": "${MAMBA_ROOT_PREFIX}/bin:$PATH"
+                    "CONDA_PREFIX": "/home/molssi/conda",
+                    "PATH": "${CONDA_PREFIX}/bin:$PATH"
                 }
             ],
             "Volumes": "$(pwd):/home/molssi",

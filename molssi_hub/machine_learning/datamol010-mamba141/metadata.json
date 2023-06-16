@@ -1,23 +1,23 @@
 {
-    "name": "PSI4",
-    "description": "PSI4 is an open-source quantum chemistry program package designed for efficient ab initio simulation molecular properties. PSI4 is capable of performing large-scale computations with >2500 basis functions on multi-core machines.",
+    "name": "Datamol",
+    "description": "Datamol is a python library to work with molecules. It's a layer built on top of RDKit and aims to be as light as possible.",
     "source_specifications": [
         {
-            "Developers": "`PSI4 contributors <https://github.com/psi4/psi4/graphs/contributors>`_",
-            "Source": "https://github.com/psi4/psi4",
-            "Documentation": "https://psicode.org/psi4manual/master/index.html"
+            "Developers": "`Datamol Contributors <https://github.com/datamol-io/datamol/graphs/contributors>`_",
+            "Source": "https://github.com/datamol-io/datamol",
+            "Documentation": "https://docs.datamol.io/stable"
         }
     ],
     "hub_specifications": [
         {
-            "Repository": "https://hub.docker.com/r/molssi/psi4v180-mamba141",
-            "Tags": "https://hub.docker.com/r/molssi/psi4v180-mamba141/tags",
-            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/psi4v180-mamba141",
-            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/compchem/psi4v180-mamba141/Dockerfile"
+            "Repository": "https://hub.docker.com/r/molssi/datamol010-mamba141",
+            "Tags": "https://hub.docker.com/r/molssi/datamol010-mamba141/tags",
+            "Source":"https://github.com/MolSSI/molssi-hub/tree/main/molssi_hub/machine_learning/datamol010-mamba141",
+            "Recipe":"https://github.com/MolSSI/molssi-hub/blob/main/molssi_hub/machine_learning/datamol010-mamba141/Dockerfile"
         }
     ],
-    "docker_pull_command": "docker pull molssi/psi4v180-mamba141:latest",
-    "docker_run_command": "docker run -it --name psi4 -v $(pwd):/home/molssi molssi/psi4v180-mamba141:latest /bin/bash",
+    "docker_pull_command": "docker pull molssi/datamol010-mamba141:latest",
+    "docker_run_command": "docker run -it --name datamol -v $(pwd):/home/molssi molssi/datamol010-mamba141:latest /bin/bash",
     "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
     "image_specifications":[
         {
