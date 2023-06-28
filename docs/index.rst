@@ -25,11 +25,11 @@ reproducibility across all domains of computational molecular sciences.
 
     installation
     quick_start
-    contribute
     base/index
-    compchem/index
     general/index
+    compchem/index
     machine_learning/index
+    contribute
     references
     dev_team
     acknowledgements

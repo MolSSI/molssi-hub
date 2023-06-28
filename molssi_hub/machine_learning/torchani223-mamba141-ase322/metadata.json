@@ -1,0 +1,42 @@
+{
+    "name": "TorchANI",
+    "description": "TorchANI is a software package based on PyTorch and offers a family of (second-generation) ANI neural network potentials. Supported potentials include `ANI-1 <https://www.nature.com/articles/sdata2017193>`_, `ANI-1x <https://aip.scitation.org/doi/abs/10.1063/1.5023802>`_, `ANI-1ccx <https://doi.org/10.26434/chemrxiv.6744440.v1>`_ and `ANI-2x <https://doi.org/10.26434/chemrxiv.11819268.v1>`_.",
+    "source_specifications": [
+        {
+            "Developers": "`Roitberg_Group <https://roitberg.chem.ufl.edu>`_",
+            "Source": "https://github.com/aiqm/torchani",
+            "Documentation": "https://aiqm.github.io/torchani/index.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/torchani223-cu117-ase-mamba141-jupyter",
+            "Tags": "https://hub.docker.com/r/molssi/torchani223-cu117-ase-mamba141-jupyter/tags",
+            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter",
+            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/torchani223-cu117-ase-mamba141-jupyter:latest",
+    "docker_run_command": "docker run -it --name torchani -v $(pwd):/home molssi/torchani223-cu117-ase-mamba141-jupyter:latest /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option. For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "Users (UID)": "molssi (1000)",
+            "Groups (GID)": "molssi (1000)",
+            "Environment variables":  [
+                {
+                    "PATH":"/opt/conda/bin"
+                }
+            ],
+            "Volumes": "$(pwd):/home/molssi",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "ase 3.22.1, mamba 1.4.1, matplotlib, numpy, scipy, pytorch-cuda 11.7, torchaudio 2.0.2, torchvision 0.15.2"
+                }
+            ]
+        }
+    ]
+}
