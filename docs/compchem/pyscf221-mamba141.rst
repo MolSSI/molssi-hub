@@ -1,23 +1,23 @@
-.. _pyscf221_base_mamba141_jupyter:
+.. _pyscf221_mamba141:
 
 *********************************************************
-{{ pyscf221_base_mamba141_jupyter.hub_specifications[0]["Source"].split("/")[-1] }}
+{{ pyscf221_mamba141.hub_specifications[0]["Source"].split("/")[-1] }}
 *********************************************************
 
-{% set title = pyscf221_base_mamba141_jupyter.get("name") %}
+{% set title = pyscf221_mamba141.get("name") %}
 
 {{title}}
 =========================================================
 
 {% block content %}
-    {{ pyscf221_base_mamba141_jupyter.description }}
+    {{ pyscf221_mamba141.description }}
 {% endblock content %}
 
 Source Specifications
 =====================
 
 {% block specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.source_specifications %}
+    {% for dc in pyscf221_mamba141.source_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -28,7 +28,7 @@ MolSSI Container Hub Specifications
 ===================================
 
 {% block hub_specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.hub_specifications %}
+    {% for dc in pyscf221_mamba141.hub_specifications %}
         {% for key, value in dc.items() %}
             * **{{ key }}**: {{ value }}
         {% endfor %}
@@ -39,19 +39,19 @@ MolSSI Container Hub Specifications
 
     .. code-block:: bash
 
-        {{ pyscf221_base_mamba141_jupyter.docker_pull_command }}
+        {{ pyscf221_mamba141.docker_pull_command }}
 
 * **Container run command**:
 
     .. code-block:: bash
 
-        {{ pyscf221_base_mamba141_jupyter.docker_run_command }}
+        {{ pyscf221_mamba141.docker_run_command }}
 
 {% block note %}
-{% if pyscf221_base_mamba141_jupyter.note != "" %}
+{% if pyscf221_mamba141.note != "" %}
 .. note::
 
-        {{ pyscf221_base_mamba141_jupyter.note }}
+        {{ pyscf221_mamba141.note }}
 {% endif %}
 {% endblock note %}
 
@@ -59,7 +59,7 @@ Image Specifications
 ====================
 
 {% block image_specifications %}
-    {% for dc in pyscf221_base_mamba141_jupyter.image_specifications %}
+    {% for dc in pyscf221_mamba141.image_specifications %}
         {% for key, value in dc.items() %}
             {% if dc[key] is string or dc[key] == "" %}
                 * **{{ key }}**: {{ value }}
