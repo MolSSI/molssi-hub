@@ -1,0 +1,43 @@
+{
+    "name": "LAMMPS",
+    "description": "LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS is a classical molecular dynamics simulation code focusing on materials modeling. It was designed to run efficiently on parallel computers and to be easy to extend and modify. Originally developed at Sandia National Laboratories, a US Department of Energy facility, LAMMPS now includes contributions from many research groups and individuals from many institutions. Most of the funding for LAMMPS has come from the US Department of Energy (DOE). LAMMPS is open-source software distributed under the terms of the GNU Public License Version 2 (GPLv2).",
+    "source_specifications": [
+        {
+            "Developers": "`LAMMPS Authors <https://www.lammps.org/authors.html>`_",
+            "Source": "https://github.com/lammps/lammps",
+            "Documentation": "https://docs.lammps.org/Manual.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/lammps-mamba141",
+            "Tags": "https://hub.docker.com/r/molssi/lammps-mamba141/tags",
+            "Source":"https://github.com/MolSSI/molssi-hub/tree/main/molssi_hub/compchem/lammps-mamba141",
+            "Recipe":"https://github.com/MolSSI/molssi-hub/blob/main/molssi_hub/compchem/lammps-mamba141/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/lammps-mamba141:latest",
+    "docker_run_command": "docker run -it --name lammps -v $(pwd):/home molssi/lammps-mamba141:latest /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bullseye-slim (linux/amd64)",
+            "Users (UID)": "root (0)",
+            "Groups (GID)": "root (0)",
+            "Environment variables":  [
+                {
+                    "CONDA_PREFIX": "/opt/conda",
+                    "PATH": "${CONDA_PREFIX}/bin:$PATH"                
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": "mamba 1.4.1"
+                }
+            ]
+        }
+    ]
+}
