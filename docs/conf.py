@@ -143,7 +143,7 @@ html_theme_options = {
     "molssi_dark": "molssi_main_logo_inverted_white.png",
     },
     "show_toc_level": 2,
-    "header_links_before_dropdown": 4,
+    "header_links_before_dropdown": 6,
     "external_links": [
     {"name": "MolSSI", "url": "https://molssi.org"}
 ],
