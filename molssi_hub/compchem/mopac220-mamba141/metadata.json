@@ -10,27 +10,27 @@
     ],
     "hub_specifications": [
         {
-            "Repository": "https://hub.docker.com/repository/docker/molssi/mopac220-mamba141/general",
-            "Tags": "https://hub.docker.com/repository/docker/molssi/mopac220-mamba141/tags",
+            "Repository": "https://hub.docker.com/r/molssi/mopac220-mamba141/general",
+            "Tags": "https://hub.docker.com/r/molssi/mopac220-mamba141/tags",
             "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/mopac220-mamba141",
             "Recipe":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/compchem/mopac220-mamba141/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssi/mopac220-mamba141:latest",
-    "docker_run_command": "docker run -it --name mopac -v $(pwd):/home/molssi molssi/mopac220-mamba141:latest /bin/bash",
-    "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
+    "docker_run_command": "docker run -it --name mopac -v $(pwd):/home molssi/mopac220-mamba141:latest /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
     "image_specifications":[
         {
             "OS/Arch": "debian:bullseye-slim (linux/amd64, linux/arm64)",
-            "Users (UID)": "molssi (1000)",
-            "Groups (GID)": "molssi (1000)",
+            "Users (UID)": "root (0)",
+            "Groups (GID)": "root (0)",
             "Environment variables": [
                 {
-                    "CONDA_PREFIX": "/home/molssi/conda",
+                    "CONDA_PREFIX": "/opt/conda",
                     "PATH": "${CONDA_PREFIX}/bin:$PATH"
                 }
             ],
-            "Volumes": "$(pwd):/home/molssi",
+            "Volumes": "None",
             "Network": "None",
             "Extras": [
                 {
