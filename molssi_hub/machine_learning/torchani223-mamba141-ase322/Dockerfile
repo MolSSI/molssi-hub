@@ -6,10 +6,10 @@ LABEL maintainer="Mohammad Mostafanejad, \
 RUN mamba install numpy \
     scipy \
     matplotlib \
-    ase \
+    ase=3.22.1 \
     -c conda-forge -yq \
  && pip install --no-cache-dir torchani==2.2.3 \
  && conda clean -afy \
- && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.a' -delete \
- && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.pyc' -delete \
- && find ${CONDA_ROOT_PREFIX} -follow -type f -name '*.js.map' -delete
+ && find ${CONDA_PREFIX} -follow -type f -name '*.a' -delete \
+ && find ${CONDA_PREFIX} -follow -type f -name '*.pyc' -delete \
+ && find ${CONDA_PREFIX} -follow -type f -name '*.js.map' -delete
