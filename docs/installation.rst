@@ -1,8 +1,44 @@
 .. _installation:
 
-***********************
-Build the Documentation
-***********************
+*************
+Installations
+*************
+
+Upon installing Docker or Apptainer on your machine,
+you will be able to use any containerized software listed 
+in the MolSSI Container Hub. Simply, follow the instructions
+below and navigate to the :ref:`quick_start` page for further
+instructions on how to unleash the power of containerized
+software in your research and hopefully, boost your productivity.
+
+Docker 
+======
+
+Users have two options to install Docker on their machines
+to be able to use the containerized software in **MolSSI Container Hub**:
+`Docker Desktop <https://docs.docker.com/desktop>`_ and 
+`Docker Engine <https://docs.docker.com/engine>`_. Docker Desktop is 
+the user-friendly option with a nice graphical user interface. It also
+comes from multiple Docker packages including Docker Engine. So, if you
+choose to install the Docker Desktop on your system, you should not install
+the Docker Engine as well. Users who are comfortable interacting with the 
+Docker daemon directly through the command-line interface can install Docker
+Engine on their system.
+
+Apptainer (Singularity)
+=======================
+
+Docker image recipes can also be used with 
+`Apptainer <https://apptainer.org/docs/admin/1.1/installation.html>`_. 
+Apptainer is an option that comes in handy for non-root users. This is 
+a common scenario on supercomputing clusters where users often do not have 
+sudo privileges.
+
+Building the Documentation
+==========================
+
+The following section is useful for users who want to build the documentation locally
+on their machine. If you do not need it, simply skip this section.
 
 .. tip::
 
