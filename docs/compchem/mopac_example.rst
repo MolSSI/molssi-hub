@@ -54,30 +54,9 @@ paste it into your terminal and edit it to look like the following command line
 
 .. code-block:: bash
 
-    docker run --rm -w /home/molssi/temp -v $(pwd):/home/molssi/temp molssi/mopac220-mamba141:latest /bin/bash -c "mopac test.mop test.out"
+    docker run --rm -w /home -v $PWD:/home molssi/mopac220-mamba141:latest /bin/bash -c "mopac test.mop test.out"
 
-then press Enter. 
-
-.. note::
-
-    The same Docker image recipe can also be used with Apptainer (Singularity) to
-    obtain the same result via the following command
-
-    .. code-block:: bash
-
-        apptainer exec docker://molssi/mopac220-mamba141:latest mopac test.mop test.out
-    
-    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
-    from the host system to the running container by default. For further details see the Apptainer 
-    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
-
-.. caution::
-
-    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
-    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
-    feature which allows an unprivileged user to run containers as root by default.
-
-If nothing goes wrong, you should see the following lines in your terminal
+then press Enter. If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
@@ -105,3 +84,16 @@ Your directory should now have the following structure
     .. code-block:: bash
 
         * JOB ENDED NORMALLY *
+
+.. note::
+
+    The same Docker image recipe can also be used with Apptainer (Singularity) to
+    obtain the same result via the following command
+
+    .. code-block:: bash
+
+        apptainer exec docker://molssi/mopac220-mamba141:latest mopac test.mop test.out
+    
+    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
+    from the host system to the running container by default. For further details see the Apptainer 
+    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.

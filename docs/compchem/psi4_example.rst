@@ -49,30 +49,9 @@ paste it into your terminal and edit it to look like the following command line
 
 .. code-block:: bash
 
-    docker run -w /home/molssi/temp -v $(pwd):/home/molssi/temp --rm molssi/psi4v180-mamba141:latest /bin/bash -c "psi4 test.inp"
+    docker run --rm -w /home -v $(pwd):/home molssi/psi4v180-mamba141:latest /bin/bash -c "psi4 test.inp"
 
-then press Enter. 
-
-.. note::
-
-    The same Docker image recipe can also be used with Apptainer (Singularity) to
-    obtain the same result via the following command
-
-    .. code-block:: bash
-
-        apptainer exec docker://molssi/psi4v180-mamba141:latest psi4 test.inp
-    
-    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
-    from the host system to the running container by default. For further details see the Apptainer 
-    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
-
-.. caution::
-
-    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
-    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
-    feature which allows an unprivileged user to run containers as root by default.
-
-If nothing goes wrong, you should see the following lines in your terminal
+then press Enter. If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
@@ -89,7 +68,6 @@ Your directory should now have the following structure
     ├── test.out
     └── timer.dat
 
-
 .. note::
 
     If you're a pessimist, run the following command to see if the job has finished normally
@@ -103,3 +81,16 @@ Your directory should now have the following structure
     .. code-block:: bash
 
         *** Psi4 exiting successfully. Buy a developer a beer!
+
+.. note::
+
+    The same Docker image recipe can also be used with Apptainer (Singularity) to
+    obtain the same result via the following command
+
+    .. code-block:: bash
+
+        apptainer exec docker://molssi/psi4v180-mamba141:latest psi4 test.inp
+    
+    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
+    from the host system to the running container by default. For further details see the Apptainer 
+    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.

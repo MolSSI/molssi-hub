@@ -57,7 +57,7 @@ paste it into your terminal and edit it to look like the following command line
 
 .. code-block:: bash
 
-    docker run --rm -w /home/molssi/temp -v .:/home/molssi/temp molssi/ase322-mamba141:latest /bin/bash -c "python test.inp"
+    docker run --rm -w /home -v $PWD:/home molssi/ase322-mamba141:latest /bin/bash -c "python test.inp"
 
 then press Enter. 
 
@@ -74,12 +74,6 @@ then press Enter.
     from the host system to the running container by default. For further details see the Apptainer 
     `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
 
-.. caution::
-
-    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
-    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
-    feature which allows an unprivileged user to run containers as root by default.
-
 If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
@@ -95,7 +89,7 @@ If nothing goes wrong, you should see the following lines in your terminal
 
     .. code-block:: bash
 
-        docker run --rm -w /home/molssi/temp -v .:/home/molssi/temp molssi/ase322-mamba141:latest /bin/bash -c "python test.inp >> test.out"
+        docker run --rm -w /home -v $PWD:/home molssi/ase322-mamba141:latest /bin/bash -c "python test.inp >> test.out"
     
     or
 

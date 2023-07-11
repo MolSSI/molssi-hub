@@ -38,15 +38,20 @@ At this stage, the content of your directory should look like the following
     └── test.inp
 
 It's time to copy the docker run command from the 
-`catalog <https://molssi-ai.github.io/molssi-ai-hub/compchem/pyscf221-base-mamba141-jupyter.html>`_,
+`catalog <https://molssi.github.io/molssi-hub/compchem/pyscf221-mamba141.html>`_,
 paste it into your terminal and edit it to look like the following command line
 
 
 .. code-block:: bash
 
-    docker run --rm -v $(pwd):/home molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 /bin/bash -c "python /home/test.inp"
+    docker run --rm -w /home -v $(pwd):/home molssi/pyscf221-mamba141:latest /bin/bash -c "python test.inp"
 
-then press Enter. 
+then press Enter. Running the aforementioned command should generate the following
+output in your terminal
+
+.. code-block:: bash
+
+    converged SCF energy = -74.9611711378677
 
 .. note::
 
@@ -55,17 +60,11 @@ then press Enter.
 
     .. code-block:: bash
 
-        apptainer exec docker://molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 python test.inp
+        apptainer exec docker://molssi/pyscf221-mamba141:latest python test.inp
     
     Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
     from the host system to the running container by default. For further details see the Apptainer 
     `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
-
-Running the aforementioned command should generate the following output in your terminal
-
-.. code-block:: bash
-
-    converged SCF energy = -74.9611711378677
 
 .. note::
 
@@ -74,10 +73,10 @@ Running the aforementioned command should generate the following output in your 
 
     .. code-block:: bash
 
-        docker run --rm -v $(pwd):/home molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 /bin/bash -c "python /home/test.inp >> /home/test.out"
+        docker run --rm -w /home -v $(pwd):/home molssi/pyscf221-mamba141:latest /bin/bash -c "python test.inp >> test.out"
     
     or
 
     .. code-block:: bash
 
-        apptainer exec docker://molssiai/pyscf221-base-mamba141-jupyter:5.15.2023 python test.inp >> test.out
+        apptainer exec docker://molssi/pyscf221-mamba141:latest python test.inp >> test.out

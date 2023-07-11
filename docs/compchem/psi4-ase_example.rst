@@ -52,36 +52,15 @@ At this stage, the content of your directory should look like the following
     └── test.inp
 
 Let's copy the docker run command from the 
-`catalog <https://molssi.github.io/molssi-hub/compchem/psi4v180-ase322-mamba141.html>`_,
+`catalog <https://molssi.github.io/molssi-hub/compchem/psi4v180-mamba141-ase322.html>`_,
 paste it into your terminal and edit it to look like the following command line
 
 
 .. code-block:: bash
 
-    docker run --rm -w /home/molssi/temp -v $(pwd):/home/molssi/temp molssi/psi4v180-ase322-mamba141:latest /bin/bash -c "python test.inp"
+    docker run --rm -w /home -v $(pwd):/home molssi/psi4v180-mamba141-ase322:latest /bin/bash -c "python test.inp"
 
-then press Enter. 
-
-.. note::
-
-    The same Docker image recipe can also be used with Apptainer (Singularity) to
-    obtain the same result via the following command
-
-    .. code-block:: bash
-
-        apptainer exec docker://molssi/psi4v180-ase322-mamba141:latest python test.inp
-    
-    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
-    from the host system to the running container by default. For further details see the Apptainer 
-    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
-
-.. caution::
-
-    Ignore (usually many) wanings that you might get the first time a SIF file is being created.
-    This is because of Apptainer's `fakeroot <https://apptainer.org/docs/user/1.1/fakeroot.html>`_ 
-    feature which allows an unprivileged user to run containers as root by default.
-
-If nothing goes wrong, you should see the following lines in your terminal
+then press Enter. If nothing goes wrong, you should see the following lines in your terminal
 
 .. code-block:: bash
 
@@ -100,18 +79,31 @@ The harmonic vibrational frequencies are shown in the final output line.
 
 .. note::
 
+    The same Docker image recipe can also be used with Apptainer (Singularity) to
+    obtain the same result via the following command
+
+    .. code-block:: bash
+
+        apptainer exec docker://molssi/psi4v180-mamba141-ase322:latest python test.inp
+    
+    Note that Apptainer binds ``/home/$USER``, ``/tmp`` and current working directory (``$PWD``)
+    from the host system to the running container by default. For further details see the Apptainer 
+    `documentation <https://apptainer.org/docs/user/latest/quick_start.html#working-with-files>`_.
+
+.. note::
+
     You can store the generated output in a separate output file by changing the command as
     follows
 
     .. code-block:: bash
 
-        docker run --rm -w /home/molssi/temp -v $(pwd):/home/molssi/temp molssi/psi4v180-ase322-mamba141:latest /bin/bash -c "python test.inp >> test.out"
+        docker run --rm -w /home -v $(pwd):/home molssi/psi4v180-mamba141-ase322:latest /bin/bash -c "python test.inp >> test.out"
     
     or
 
     .. code-block:: bash
 
-        apptainer exec docker://molssi/psi4v180-ase322-mamba141:latest python test.inp >> test.out
+        apptainer exec docker://molssi/psi4v180-mamba141-ase322:latest python test.inp >> test.out
 
 .. caution::
 
@@ -123,14 +115,14 @@ The harmonic vibrational frequencies are shown in the final output line.
 
     .. code-block:: bash
 
-        docker run --rm -w /home/molssi/temp -v $(pwd):/home/molssi/temp molssi/psi4v180-ase322-mamba141:latest /bin/bash -c "export PSI_SCRATCH=/home/molssi/temp && python test.inp >> test.out"
+        docker run --rm -w /home -v $(pwd):/home molssi/psi4v180-mamba141-ase322:latest /bin/bash -c "export PSI_SCRATCH=/home && python test.inp >> test.out"
     
     or
 
     .. code-block:: bash
 
-        apptainer exec docker://molssi/psi4v180-ase322-mamba141:latest sh -c "export PSI_SCRATCH=$PWD && python test.inp >> test.out"
+        apptainer exec docker://molssi/psi4v180-mamba141-ase322:latest /bin/sh -c "export PSI_SCRATCH=$PWD && python test.inp >> test.out"
 
-    Since our current working directory on the host machine is binded to ``/home/molssi`` within the container,
-    the contents of the ``PSI_SCRATCH`` will be retained even after the container is destroyed when the 
-    job is finished.
+    Since our current working directory on the host machine is binded to ``/home`` within 
+    the container, the contents of the ``PSI_SCRATCH`` will be retained even after the container is 
+    destroyed when the job is finished.
