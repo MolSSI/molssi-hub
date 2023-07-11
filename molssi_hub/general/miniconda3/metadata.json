@@ -17,21 +17,20 @@
         }
     ],
     "docker_pull_command": "docker pull molssi/miniconda3:latest",
-    "docker_run_command": "docker run -it --name miniconda3 -v $(pwd):/home/molssi molssi/miniconda3:latest /bin/bash",
-    "note": "By default, the ``-v $(pwd):/home/molssi`` option mounts the current working directory to ``/home/molssi`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
+    "docker_run_command": "docker run -it --name miniconda3 -v $(pwd):/home molssi/miniconda3:latest /bin/bash",
+    "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option.",
     "image_specifications":[
         {
             "OS/Arch": "debian:bullseye-slim (linux/amd64, linux/arm64)",
-            "Users (UID)": "molssi (1000)",
-            "Groups (GID)": "molssi (1000)",
+            "Users (UID)": "root (0)",
+            "Groups (GID)": "root (0)",
             "Environment variables":  [
                 {
-                    "USERNAME": "molssi",
-                    "CONDA_ROOT_PREFIX": "home/${USERNAME}/conda",
-                    "PATH": "${CONDA_ROOT_PREFIX}/bin:$PATH"
+                    "CONDA_PREFIX": "/opt/conda",
+                    "PATH": "${CONDA_PREFIX}/bin:$PATH"
                 }
             ],
-            "Volumes": "$(pwd):/home/molssi",
+            "Volumes": "None",
             "Network": "None",
             "Extras": [
                 {
