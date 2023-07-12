@@ -1,5 +1,5 @@
 {
-    "name": "TorchANI",
+    "name": "TorchANI (+JupyterLab)",
     "description": "TorchANI is a software package based on PyTorch and offers a family of (second-generation) ANI neural network potentials. Supported potentials include `ANI-1 <https://www.nature.com/articles/sdata2017193>`_, `ANI-1x <https://aip.scitation.org/doi/abs/10.1063/1.5023802>`_, `ANI-1ccx <https://doi.org/10.26434/chemrxiv.6744440.v1>`_ and `ANI-2x <https://doi.org/10.26434/chemrxiv.11819268.v1>`_.",
     "source_specifications": [
         {
@@ -10,14 +10,14 @@
     ],
     "hub_specifications": [
         {
-            "Repository": "https://hub.docker.com/r/molssi/torchani223-cu117-ase-mamba141-jupyter",
-            "Tags": "https://hub.docker.com/r/molssi/torchani223-cu117-ase-mamba141-jupyter/tags",
-            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter",
-            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/machine_learning/torchani223-cu117-ase-mamba141-jupyter/Dockerfile"
+            "Repository": "https://hub.docker.com/r/molssi/torchani223-mamba141-ase322-jupyter",
+            "Tags": "https://hub.docker.com/r/molssi/torchani223-mamba141-ase322-jupyter/tags",
+            "Source":"https://github.com/molssi/molssi-hub/tree/main/molssi_hub/machine_learning/torchani223-mamba141-ase322-jupyter",
+            "Recipe":"https://github.com/molssi/molssi-hub/blob/main/molssi_hub/machine_learning/torchani223-mamba141-ase322-jupyter/Dockerfile"
         }
     ],
-    "docker_pull_command": "docker pull molssi/torchani223-cu117-ase-mamba141-jupyter:5.3.2023",
-    "docker_run_command": "docker run -it --name torchani -v $(pwd):/home -p 8888:8888 molssi/torchani223-cu117-ase-mamba141-jupyter:5.3.2023",
+    "docker_pull_command": "docker pull molssi/torchani223-mamba141-ase322-jupyter:latest",
+    "docker_run_command": "docker run -it --name torchani-jupyter -v $(pwd):/home -p 8888:8888 molssi/torchani223-mamba141-ase322-jupyter:latest",
     "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option. By default, Jupyter server communicates to your computed through port ``8888``. Make sure to include ``-p 8888:8888`` in the ``docker run`` command. For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
     "image_specifications":[
         {
