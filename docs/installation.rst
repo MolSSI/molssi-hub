@@ -6,7 +6,7 @@ Installations
 
 Upon installing Docker or Apptainer on your machine,
 you will be able to use any containerized software listed 
-in the MolSSI Container Hub. Simply, follow the instructions
+in the **MolSSI Container Hub**. Simply, follow the instructions
 below and navigate to the :ref:`quick_start` page for further
 instructions on how to unleash the power of containerized
 software in your research and hopefully, boost your productivity.
