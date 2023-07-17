@@ -21,6 +21,7 @@ construct and run containerized computational chemistry software.
     psi4v180-mamba141
     psi4_example
     psi4v180-mamba141-ase322
+    psi4v180-mamba141-ase322-jupyter
     psi4-ase_example
     pyscf221-mamba141
     pyscf_example

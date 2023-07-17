@@ -1,5 +1,5 @@
 {
-    "name": "TorchANI (+JupyterLab)",
+    "name": "TorchANI + ASE + JupyterLab",
     "description": "TorchANI is a software package based on PyTorch and offers a family of (second-generation) ANI neural network potentials. Supported potentials include `ANI-1 <https://www.nature.com/articles/sdata2017193>`_, `ANI-1x <https://aip.scitation.org/doi/abs/10.1063/1.5023802>`_, `ANI-1ccx <https://doi.org/10.26434/chemrxiv.6744440.v1>`_ and `ANI-2x <https://doi.org/10.26434/chemrxiv.11819268.v1>`_.",
     "source_specifications": [
         {
@@ -31,11 +31,16 @@
                 }
             ],
             "Volumes": "None",
-            "Network": "None",
+            "Network": [
+                {
+                    "ip": "*",
+                    "port": "8888"
+                }
+            ],
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "ASE, jupyterlab, mamba 1.4.1, matplotlib, numpy, scipy, pytorch-cuda 11.7, torchaudio, torchvision"
+                    "Important packages installed": "ase 3.22.1, jupyterlab, mamba 1.4.1, matplotlib, numpy, scipy, pytorch-cuda 11.7, torchaudio, torchvision"
                 }
             ]
         }
