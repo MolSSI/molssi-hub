@@ -8,7 +8,7 @@ RUN mamba install numpy \
     matplotlib \
     ase=3.22.1 \
     jupyterlab \
-    -c conda-forge -y \
+    -c conda-forge -yq \
  && pip install --no-cache-dir torchani==2.2.3 \
  && conda clean -afy \
  && find ${CONDA_PREFIX} -follow -type f -name '*.a' -delete \
