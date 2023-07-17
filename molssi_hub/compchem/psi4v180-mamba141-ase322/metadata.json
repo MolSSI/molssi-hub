@@ -35,7 +35,7 @@
             "Extras": [
                 {
                     "Added directories": "None",
-                    "Important packages installed": "mamba 1.4.1, PSI4 1.8.0, ASE 3.22.1, NumPy, SciPy, matplotlib"
+                    "Important packages installed": "mamba 1.4.1, PSI4 1.8.0, ase 3.22.1, NumPy, SciPy, matplotlib"
                 }
             ]
         }
