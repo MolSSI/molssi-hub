@@ -17,7 +17,7 @@
         }
     ],
     "docker_pull_command": "docker pull molssi/psi4v180-mamba141-ase322-jupyter:latest",
-    "docker_run_command": "docker run -it --name psi4-ase-jupyter -v $(pwd):/home molssi/psi4v180-mamba141-ase322-jupyter:latest /bin/bash",
+    "docker_run_command": "docker run -it --name psi4-ase-jupyter -v $(pwd):/home -p 8888:8888 molssi/psi4v180-mamba141-ase322-jupyter:latest /bin/bash",
     "note": "By default, the ``-v $(pwd):/home`` option mounts the current working directory to ``/home`` in your running container. Doing so, the contents of your current working directory become available in your running container. If you do not wish this to happen, you may simply remove or change this option. By default, Jupyter server communicates to your computed through port ``8888``. Make sure to include ``-p 8888:8888`` in the ``docker run`` command. For NVIDIA GPU support with nvidia containers, add the ``--runtime nvidia --gpus all`` flags to the previous container run command and then run ``nvidia-smi`` to make sure all available GPUs on the docker host are visible inside the docker container.",
     "image_specifications":[
         {
