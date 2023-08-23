@@ -105,7 +105,7 @@ the job execution.
 
     .. code-block:: bash
 
-        docker run --rm -w /home -v $(pwd):/home molssi/lammps-mamba141:latest /bin/bash -c /bin/bash -c "lmp_serial -in in.lj -l log.out"
+        docker run --rm -w /home -v $(pwd):/home molssi/lammps-mamba141:latest /bin/bash -c "lmp_serial -in in.lj -l log.out"
     
     or
 
