@@ -17,8 +17,9 @@
         }
     ],
     "docker_pull_command": "docker pull molssi/rdkitpostgres-postgres162:latest",
-    "docker_run_command": "docker run --name rdkitpostgres -e POSTGRES_PASSWORD=mysecretpassword -d molssi/rdkitpostgres-postgres162:latest",
+    "docker_run_command": "docker run --name rdkitpostgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d molssi/rdkitpostgres-postgres162:latest",
     "note": "See the full documentation for the base PostgreSQL image for alternative environment variables and run commands - https://hub.docker.com/_/postgres",
+    "tip": "See the full documentation for the base PostgreSQL image for alternative environment variables and run commands - https://hub.docker.com/_/postgres",
     "image_specifications":[
         {
             "OS/Arch": "debian:bookworm-slim",
