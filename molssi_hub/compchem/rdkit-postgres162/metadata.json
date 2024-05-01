@@ -1,0 +1,46 @@
+{
+    "name": "RDKit Postgres Cartridge",
+    "description": "RDKit PostgreSQL cartridge is a PostgreSQL extension that provides chemical structure handling functionality to the PostgreSQL database. It is based on the RDKit cheminformatics library.",
+    "source_specifications": [
+        {
+            "Developers": "https://github.com/rdkit/rdkit/graphs/contributors",
+            "Source": "https://github.com/rdkit/rdkit",
+            "Documentation": "https://www.rdkit.org/docs/Cartridge.html"
+        }
+    ],
+    "hub_specifications": [
+        {
+            "Repository": "https://hub.docker.com/r/molssi/rdkit-postgres162",
+            "Tags": "https://hub.docker.com/r/molssi/rdkit-postgres162/tags",
+            "Source":"https://github.com/MolSSI/molssi-hub/tree/main/molssi_hub/compchem/rdkit-postgres162",
+            "Recipe":"https://github.com/MolSSI/molssi-hub/blob/main/molssi_hub/compchem/rdkit-postgres162/Dockerfile"
+        }
+    ],
+    "docker_pull_command": "docker pull molssi/rdkitpostgres-postgres162:latest",
+    "docker_run_command": "docker run --name rdkitpostgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d molssi/rdkitpostgres-postgres162:latest",
+    "note": "See the full documentation for the base PostgreSQL image for alternative environment variables and run commands - https://hub.docker.com/_/postgres",
+    "tip": "See the full documentation for the base PostgreSQL image for alternative environment variables and run commands - https://hub.docker.com/_/postgres",
+    "image_specifications":[
+        {
+            "OS/Arch": "debian:bookworm-slim",
+            "Users (UID)": "root (0)",
+            "Groups (GID)": "root (0)",
+            "Environment variables": [
+                {
+                    "POSTGRES_PASSWORD": "",
+                    "POSTGRES_USER": "postgres",
+                    "POSTGRES_DB": "postgres"
+
+                }
+            ],
+            "Volumes": "None",
+            "Network": "None",
+            "Extras": [
+                {
+                    "Added directories": "None",
+                    "Important packages installed": ""
+                }
+            ]
+        }
+    ]
+}

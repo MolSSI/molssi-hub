@@ -25,3 +25,5 @@ construct and run containerized computational chemistry software.
     psi4-ase_example
     pyscf221-mamba141
     pyscf_example
+    rdkit-postgres162
+    rdkitpostgres-example
