@@ -2,10 +2,17 @@
 MolSSI Container Hub
 ********************
 
-.. figure:: _static/molssi_main_logo.png
-  :align: center
-  :scale: 25%
-  :alt: MolSSI Container Hub logo
+.. image:: _static/molssi_main_logo_inverted_white.png
+    :align: center
+    :scale: 25%
+    :class: only-dark
+    :alt: MolSSI Container Hub logo
+
+.. image:: _static/molssi_main_logo.png
+    :align: center
+    :scale: 25%
+    :class: only-light
+    :alt: MolSSI Container Hub logo
 
 Welcome to **MolSSI Container Hub's** documentation.
 

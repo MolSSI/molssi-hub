@@ -1,11 +1,9 @@
-@import "../basic.css";
-
 html[data-theme="light"] {
     --pst-color-primary: #ed1c24;
 	--pst-color-warning: #ed1c24;
 	--pst-color-primary-highlight: #bc151b;
-	--pst-color-secondary: #1d35e7;
-	--pst-color-secondary-highlight: #3e51e3;
+	--pst-color-secondary: #1A1A1A;
+	--pst-color-secondary-highlight: #222222;
 
 }
 
@@ -13,11 +11,12 @@ html[data-theme="dark"] {
     --pst-color-primary: #ed1c24;
 	--pst-color-warning: #ed1c24;
 	--pst-color-primary-highlight: #bc151b;
+	--pst-color-primary-text: #ffffff;
 	--pst-color-background: #1A1A1A;
-	--pst-color-secondary: #1d35e7;
-	--pst-color-secondary-highlight: #3e51e3;
-
-	
+	--pst-color-on-background: #222222;
+	--pst-color-surface: #222222;
+	--pst-color-secondary: #ffffff;
+	--pst-color-secondary-highlight: #ffffffb3;
 }
 
 html[data-theme="light"] a:hover {
@@ -28,8 +27,11 @@ html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] 
 	color: #ffffff;
 }
 
+html[data-theme="light"] a, a:visited {
+	color: var(--pst-color-primary);
+}
 
-html[data-theme="dark"] a {
+html[data-theme="dark"] a, a:visited {
 	color: #ffffff;
 }
 
@@ -44,7 +46,7 @@ html[data-theme="dark"] p .reference.internal {
 }
 
 html[data-theme="dark"] a:hover {
-	color: #ed1c24;
+	color: var(--pst-color-primary);
 }
 
 html[data-theme="dark"] .prev-next-area a p.prev-next-title {
@@ -52,7 +54,7 @@ html[data-theme="dark"] .prev-next-area a p.prev-next-title {
 }
 
 html[data-theme="dark"] .prev-next-area:hover a:hover p.prev-next-title:hover {
-    color: #ed1c24;
+    color: var(--pst-color-primary);
 }
 
 html[data-theme="dark"] dt:target {
@@ -68,6 +70,14 @@ img:not(.logo__image, .footer_logo) {
 }
 
 
-.footer_logo {
-	max-height: 60px;
+table.border, .border table, .border caption, .border thead, .border tbody, .border th, .border td {
+	border: thin solid gray !important;
+	text-align: center;
 }
+
+/* Get rid of side bar , based on https://github.com/executablebooks/sphinx-book-theme/issues/732#issuecomment-1752572223 */
+.bd-sidebar-primary div#rtd-footer-container {
+	bottom:-1rem;
+	margin:-1rem;
+	position:fixed;
+	}
