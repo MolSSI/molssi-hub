@@ -12,8 +12,8 @@
         {
             "Repository": "",
             "Tags": "",
-            "Source":"",
-            "Recipe":""
+            "Source":"https://github.com/MolSSI/molssi-hub/tree/main/molssi_hub/compchem/rdkit-postgres162",
+            "Recipe":"https://github.com/MolSSI/molssi-hub/blob/main/molssi_hub/compchem/rdkit-postgres162/Dockerfile"
         }
     ],
     "docker_pull_command": "docker pull molssi/rdkitpostgres-postgres162:latest",
